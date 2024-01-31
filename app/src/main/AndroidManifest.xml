@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Alumnos"
+        tools:targetApi="31">
+        <activity
+            android:name=".HistoriaAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InglesAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeografiaAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FilosofiaAyudaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MatematicasAyudaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_matematicas_ayuda"
+            android:theme="@style/Theme.Alumnos.NoActionBar" />
+        <activity
+            android:name=".GuerramundialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SemestreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuimicaInicio"
+            android:exported="false" />
+        <activity
+            android:name=".MatematicasInicio"
+            android:exported="false" />
+        <activity
+            android:name=".FisicaInicio"
+            android:exported="false" />
+        <activity
+            android:name=".FilosofiaInicio"
+            android:exported="false" />
+        <activity
+            android:name=".HistoriaInicio"
+            android:exported="false" />
+        <activity
+            android:name=".InglesInicio"
+            android:exported="false" />
+        <activity
+            android:name=".Materias"
+            android:exported="false" />
+        <activity
+            android:name=".PaginaunoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

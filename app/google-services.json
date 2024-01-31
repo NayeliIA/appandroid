@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1076787645180",
+    "project_id": "pruebaalumnos-d0050",
+    "storage_bucket": "pruebaalumnos-d0050.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076787645180:android:ba5ab60245348e31156579",
+        "android_client_info": {
+          "package_name": "com.example.alumnos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVm6RKUDWracpuOBOlGZnSAeJbmLYUqN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
