@@ -40,7 +40,7 @@ public class HistoriaAyudaActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_matematicas_ayuda);
+        setContentView(R.layout.activity_historia_ayuda);
 
         atras4 = findViewById(R.id.atras4);
         button = findViewById(R.id.button);
@@ -64,11 +64,11 @@ public class HistoriaAyudaActivity extends AppCompatActivity implements View.OnC
 
         // Inicializar SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        linkSet = sharedPreferences.getStringSet("links", new HashSet<>());
+        linkSet = sharedPreferences.getStringSet("links_geografia", new HashSet<>());
 
         // Mostrar los links almacenados
         for (String link : linkSet) {
-            String tema = sharedPreferences.getString(link, "");
+            String tema = sharedPreferences.getString("historia_"+link, "");
             addLinkView(link, tema, Color.BLUE,20);
         }
 
@@ -92,8 +92,8 @@ public class HistoriaAyudaActivity extends AppCompatActivity implements View.OnC
 
             // Guardar el conjunto en SharedPreferences
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putStringSet("links", linkSet);
-            editor.putString(link, tema);
+            editor.putStringSet("links_geografia", linkSet);
+            editor.putString("historia_"+link, tema);
             editor.apply();
             addLinkView(link, tema,Color.BLUE,20);
         }

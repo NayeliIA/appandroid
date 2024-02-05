@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Alumnos"
         tools:targetApi="31">
         <activity
+            android:name=".Secundaria"
+            android:exported="false" />
+        <activity
+            android:name=".Primaria"
+            android:exported="false" />
+        <activity
+            android:name=".EscolarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".HistoriaAyudaActivity"
             android:exported="false" />
         <activity

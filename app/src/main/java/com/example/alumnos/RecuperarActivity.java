@@ -3,6 +3,7 @@ package com.example.alumnos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,8 +24,7 @@ public class RecuperarActivity extends AppCompatActivity {
     ImageView atras;
 
     EditText correoR;
-    EditText contraseñaR;
-    EditText confirmarcontraseña;
+
 
     Button btnRegistro;
 
@@ -39,8 +39,6 @@ public class RecuperarActivity extends AppCompatActivity {
         atras = findViewById(R.id.atras8);
 
         correoR = findViewById(R.id.correoR);
-        contraseñaR = findViewById(R.id.contraseñaR);
-        confirmarcontraseña = findViewById(R.id.confirmarcontraseña);
 
         btnRegistro = findViewById(R.id.btnRecuperar);
         mAuth = FirebaseAuth.getInstance();
@@ -48,11 +46,13 @@ public class RecuperarActivity extends AppCompatActivity {
 
 
         atras.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(RecuperarActivity.this, InicioActivity.class);
+                    startActivity(i);
+                }
+            });
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

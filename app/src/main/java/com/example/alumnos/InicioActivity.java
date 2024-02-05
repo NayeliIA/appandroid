@@ -19,12 +19,12 @@ import com.google.firebase.auth.FirebaseAuth;
 public class InicioActivity extends AppCompatActivity {
 
     ImageView atras5;
-   TextView registrateAqui;
-   TextView recuperarcontrasena;
+    TextView registrateAqui;
+    TextView recuperarcontrasena;
     EditText correo;
     EditText contraseña;
     Button btnEntrar;
-   FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,20 +77,24 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     private void login() {
-            String correoL = correo.getText().toString();
-            String contraseñaL = contraseña.getText().toString();
+        String correoL = correo.getText().toString();
+        String contraseñaL = contraseña.getText().toString();
 
-            mAuth.signInWithEmailAndPassword(correoL, contraseñaL).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+        mAuth.signInWithEmailAndPassword(correoL, contraseñaL).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    if (correoL.equals("nayeliia230@gmail.com")) {
+                        Intent i = new Intent(InicioActivity.this, AdminActivity.class); // Reemplaza activity_admin con el nombre correcto de tu actividad
                         startActivity(i);
                     } else {
-                        Toast.makeText(InicioActivity.this, "Correo/contraseña incorrectos", Toast.LENGTH_SHORT).show();
-
+                        Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+                        startActivity(i);
                     }
+                } else {
+                    Toast.makeText(InicioActivity.this, "Correo/contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }
-            });
+            }
+        });
     }
 }

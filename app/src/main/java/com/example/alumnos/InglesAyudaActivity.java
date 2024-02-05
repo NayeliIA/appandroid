@@ -43,7 +43,7 @@ public class InglesAyudaActivity extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_matematicas_ayuda);
+        setContentView(R.layout.activity_ingles_ayuda);
 
         atras4 = findViewById(R.id.atras4);
         button = findViewById(R.id.button);
@@ -67,11 +67,11 @@ public class InglesAyudaActivity extends AppCompatActivity implements View.OnCli
 
         // Inicializar SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        linkSet = sharedPreferences.getStringSet("links", new HashSet<>());
+        linkSet = sharedPreferences.getStringSet("links_ingles", new HashSet<>());
 
         // Mostrar los links almacenados
         for (String link : linkSet) {
-            String tema = sharedPreferences.getString(link, "");
+            String tema = sharedPreferences.getString("ingles_"+link, "");
             addLinkView(link, tema, Color.BLUE,20);
         }
 
@@ -98,8 +98,8 @@ public class InglesAyudaActivity extends AppCompatActivity implements View.OnCli
 
             // Guardar el conjunto en SharedPreferences
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putStringSet("links", linkSet);
-            editor.putString(link, tema);
+            editor.putStringSet("links_ingles", linkSet);
+            editor.putString("ingles_" + link, tema);
             editor.apply();
             addLinkView(link, tema,Color.BLUE,20);
         }

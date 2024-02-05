@@ -66,7 +66,7 @@ public class MatematicasAyudaActivity extends AppCompatActivity implements View.
 
         // Mostrar los links almacenados
         for (String link : linkSet) {
-            String tema = sharedPreferences.getString(link, "");
+            String tema = sharedPreferences.getString("matematicas_"+link, "");
             addLinkView(link, tema, Color.BLUE,20);
         }
 

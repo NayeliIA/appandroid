@@ -27,7 +27,7 @@ import android.content.SharedPreferences;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 
-public class FilosofiaAyudaActivity extends AppCompatActivity implements View.OnClickListener{
+public class FilosofiaAyudaActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_CODE_AGREGAR = 100;
     ImageView atras4;
@@ -36,7 +36,7 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
     private SharedPreferences sharedPreferences;
     private Set<String> linkSet;
     private final static String GOOGLE1 = "https://view.genial.ly/64dad9c843f8dc001269a405/presentation-mitos-cosmogonicos";
-    private final static String GOOGLE2= "https://view.genial.ly/5d8026a69b543a0fe680f2d2/presentation-mito";
+    private final static String GOOGLE2 = "https://view.genial.ly/5d8026a69b543a0fe680f2d2/presentation-mito";
     private final static String GOOGLE3 = "https://view.genial.ly/64ebe295220d2f0018ff5420/presentation-pitagoricos";
     private final static String GOOGLE4 = "https://view.genial.ly/5ea9d53c9065570d9a2f0758/presentation-escuela-eleatica";
     private final static String GOOGLE5 = "https://view.genial.ly/64fe5d87a4860700186ef0de/presentation-presentacion-de-heraclito";
@@ -50,7 +50,7 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_matematicas_ayuda);
+        setContentView(R.layout.activity_filosofia_ayuda);
 
         atras4 = findViewById(R.id.atras4);
         button = findViewById(R.id.button);
@@ -75,26 +75,26 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
 
         // Inicializar SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        linkSet = sharedPreferences.getStringSet("links", new HashSet<>());
+        linkSet = sharedPreferences.getStringSet("links_filosofia", new HashSet<>());
 
         // Mostrar los links almacenados
         for (String link : linkSet) {
-            String tema = sharedPreferences.getString(link, "");
-            addLinkView(link, tema, Color.BLUE,20);
+            String tema = sharedPreferences.getString("filosofia_"+link, "");
+            addLinkView(link, tema, Color.BLUE, 20);
         }
 
         // Mostrar los enlaces de YouTube almacenados
-        addLinkView(GOOGLE1, "Mitos Cosmogónicos", Color.BLUE,20);
-        addLinkView(GOOGLE2, "El mito",Color.BLUE,20 );
-        addLinkView(GOOGLE3, "Pitagóricos", Color.BLUE,20);
-        addLinkView(GOOGLE4, "Escuela Eleática", Color.BLUE,20);
-        addLinkView(GOOGLE5, "Heráclito", Color.BLUE,20);
-        addLinkView(GOOGLE6, "Filosofós Pluralistas", Color.BLUE,20);
-        addLinkView(GOOGLE7, "Los primos Filosofós", Color.BLUE,20);
-        addLinkView(GOOGLE8, "Los atómistas", Color.BLUE,20);
-        addLinkView(GOOGLE9, "Sócrates", Color.BLUE,20);
-        addLinkView(GOOGLE10, "Metafísica de Platón", Color.BLUE,20);
-        addLinkView(GOOGLE11, "Introducción a Platón", Color.BLUE,20);
+        addLinkView(GOOGLE1, "Mitos Cosmogónicos", Color.BLUE, 20);
+        addLinkView(GOOGLE2, "El mito", Color.BLUE, 20);
+        addLinkView(GOOGLE3, "Pitagóricos", Color.BLUE, 20);
+        addLinkView(GOOGLE4, "Escuela Eleática", Color.BLUE, 20);
+        addLinkView(GOOGLE5, "Heráclito", Color.BLUE, 20);
+        addLinkView(GOOGLE6, "Filosofós Pluralistas", Color.BLUE, 20);
+        addLinkView(GOOGLE7, "Los primos Filosofós", Color.BLUE, 20);
+        addLinkView(GOOGLE8, "Los atómistas", Color.BLUE, 20);
+        addLinkView(GOOGLE9, "Sócrates", Color.BLUE, 20);
+        addLinkView(GOOGLE10, "Metafísica de Platón", Color.BLUE, 20);
+        addLinkView(GOOGLE11, "Introducción a Platón", Color.BLUE, 20);
     }
 
     @Override
@@ -108,8 +108,8 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
 
             // Guardar el conjunto en SharedPreferences
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putStringSet("links", linkSet);
-            editor.putString(link, tema);
+            editor.putStringSet("links_filosofia", linkSet);
+            editor.putString("filosofia_"+link, tema);
             editor.apply();
             addLinkView(link, tema,Color.BLUE,20);
         }
@@ -131,9 +131,9 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
 
     }
 
-    /*private boolean isYouTubeLink(String link) {
+    private boolean isYouTubeLink(String link) {
         return link.contains("youtube.com") || link.contains("youtu.be");
-    }*/
+    }
 
     private void addLinkView(String link, String tema, int color, float textSize) {
         String guion = "-" + " " + " " + tema + " " + " ";
@@ -165,6 +165,4 @@ public class FilosofiaAyudaActivity extends AppCompatActivity implements View.On
         // Agregar el TextView al Layout
         LayoutTopics.addView(textView);
     }
-
-
-}
+    }

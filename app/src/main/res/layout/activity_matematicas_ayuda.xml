@@ -83,17 +83,4 @@
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.615"></LinearLayout>
 
-  <ImageView
-      android:id="@+id/eliminar"
-      android:layout_width="53dp"
-      android:layout_height="46dp"
-      android:background="#20020202"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.938"
-      app:srcCompat="@android:drawable/ic_menu_delete" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

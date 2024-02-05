@@ -20,7 +20,7 @@ public class PaginaunoActivity extends AppCompatActivity {
         btnMaterias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaginaunoActivity.this, SemestreActivity.class);
+                Intent i = new Intent(PaginaunoActivity.this, EscolarActivity.class);
                 startActivity(i);
             }
         });

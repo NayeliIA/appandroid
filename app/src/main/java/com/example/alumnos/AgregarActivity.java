@@ -32,7 +32,6 @@ public class AgregarActivity extends AppCompatActivity {
                 String tema = editTextTema.getText().toString();
                 String link = editTextLink.getText().toString();
 
-
                 Intent intent = new Intent();
                 intent.putExtra("tema", tema);
                 intent.putExtra("link", link);

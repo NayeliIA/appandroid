@@ -64,11 +64,11 @@ public class GeografiaAyudaActivity extends AppCompatActivity implements View.On
 
         // Inicializar SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        linkSet = sharedPreferences.getStringSet("links", new HashSet<>());
+        linkSet = sharedPreferences.getStringSet("links_geografia", new HashSet<>());
 
         // Mostrar los links almacenados
         for (String link : linkSet) {
-            String tema = sharedPreferences.getString(link, "");
+            String tema = sharedPreferences.getString("geografia_"+link, "");
             addLinkView(link, tema, Color.BLUE,20);
         }
 
@@ -91,8 +91,8 @@ public class GeografiaAyudaActivity extends AppCompatActivity implements View.On
 
             // Guardar el conjunto en SharedPreferences
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putStringSet("links", linkSet);
-            editor.putString(link, tema);
+            editor.putStringSet("links_geografia", linkSet);
+            editor.putString("geografia_"+link, tema);
             editor.apply();
             addLinkView(link, tema,Color.BLUE,20);
         }

@@ -39,7 +39,7 @@ dependencies {
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-
+    implementation("androidx.cardview:cardview:1.0.0")
 
     implementation("com.google.firebase:firebase-auth:22.2.0")
     implementation("com.google.firebase:firebase-analytics:21.5.0")

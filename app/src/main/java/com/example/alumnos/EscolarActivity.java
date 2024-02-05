@@ -5,46 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
-public class SemestreActivity extends AppCompatActivity {
-    private Spinner spinnerLanguages, spinner2;
+public class EscolarActivity extends AppCompatActivity {
+
+    private Spinner spinnernivel;
     Button buttonok;
     ImageView atras4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_semestre);
+        setContentView(R.layout.activity_escolar);
         atras4 = findViewById(R.id.atras4);
-        spinnerLanguages = findViewById(R.id.spinner4);
-        spinner2 = findViewById(R.id.spinner2);
+        spinnernivel = findViewById(R.id.spinner4);
 
-       /* // Recuperar el correo electrónico
-        Intent intent = getIntent();
-        String correoElectronico = intent.getStringExtra("CORREO_ELECTRONICO");
-        if (correoElectronico != null && correoElectronico.equals("nayeli.garcia0103@gmail.com")) {
-            ImageView imagenEliminar = findViewById(R.id.eliminar);
-            imagenEliminar.setVisibility(View.VISIBLE); // Hace visible la imagen
-        }*/
 
         atras4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SemestreActivity.this, EscolarActivity.class);
+                Intent i = new Intent(EscolarActivity.this, PaginaunoActivity.class);
                 startActivity(i);
             }
         });
         // Crea el adaptador para el Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.languages, android.R.layout.simple_spinner_item);
+                R.array.nivel, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerLanguages.setAdapter(adapter);
+        spinnernivel.setAdapter(adapter);
 
-        /*ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
+       /* ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
                 R.array.grado, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter1);*/
@@ -56,10 +49,20 @@ public class SemestreActivity extends AppCompatActivity {
         buttonok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String semestreSeleccionado = (String) spinnerLanguages.getSelectedItem();
-                if(semestreSeleccionado.equals("5° Semestre")) {
-                    Intent i = new Intent(SemestreActivity.this, Materias.class);
+                String nivelSeleccionado = (String) spinnernivel.getSelectedItem();
+                if (nivelSeleccionado.equals("Primaria")) {
+                    Intent i = new Intent(EscolarActivity.this, Primaria.class);
                     startActivity(i);
+                } else {
+                    if (nivelSeleccionado.equals("Secundaria")) {
+                        Intent i = new Intent(EscolarActivity.this, Secundaria.class);
+                        startActivity(i);
+                    } else {
+                        if (nivelSeleccionado.equals("Preparatoria")) {
+                            Intent i = new Intent(EscolarActivity.this, SemestreActivity.class);
+                            startActivity(i);
+                        }
+                    }
                 }
             }
         });

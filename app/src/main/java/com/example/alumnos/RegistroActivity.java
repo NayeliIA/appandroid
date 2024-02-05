@@ -54,7 +54,8 @@ public class RegistroActivity extends AppCompatActivity {
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(RegistroActivity.this, InicioActivity.class);
+                startActivity(i);
             }
         });
         btnRegistro.setOnClickListener(new View.OnClickListener() {
