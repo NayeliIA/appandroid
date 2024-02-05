@@ -2,6 +2,7 @@ package com.example.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -49,8 +50,9 @@ ImageView atras1;
         matematicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this, MatematicasAyudaActivity.class);
-                startActivity(i);
+                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
+                i.putExtra("materia","MATEMATICAS");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
         filosofia = findViewById(R.id.filosofia);

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Alumnos"
         tools:targetApi="31">
         <activity
+            android:name=".AdminPropuestas"
+            android:exported="false" />
+        <activity
+            android:name=".modelos.AdminPropuestas"
+            android:exported="false" />
+        <activity
+            android:name=".CrearPropuesta"
+            android:exported="false" />
+        <activity
+            android:name=".MaterialDeAyuda"
+            android:exported="false" />
+        <activity
             android:name=".HistoriaAyudaActivity"
             android:exported="false" />
         <activity

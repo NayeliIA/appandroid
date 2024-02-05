@@ -38,8 +38,14 @@ public class InicioActivity extends AppCompatActivity {
         atras5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(InicioActivity.this, MainActivity.class);
-                startActivity(i);
+
+
+                    Intent i = new Intent(InicioActivity.this, MainActivity.class);
+                    startActivity(i);
+
+
+
+
             }
         });
         recuperarcontrasena = findViewById(R.id.recuperarcontrasena);
@@ -84,8 +90,18 @@ public class InicioActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
-                        startActivity(i);
+
+                        if(correo.getText().toString().startsWith("luishiram")){
+                            Intent i = new Intent(InicioActivity.this, AdminPropuestas.class);
+                            startActivity(i);
+
+                        }else{
+                            Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+                            startActivity(i);
+
+                        }
+
+
                     } else {
                         Toast.makeText(InicioActivity.this, "Correo/contraseña incorrectos", Toast.LENGTH_SHORT).show();
 
