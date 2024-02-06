@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Alumnos"
         tools:targetApi="31">
         <activity
+
             android:name=".Secundaria"
             android:exported="false" />
         <activity
@@ -22,7 +23,16 @@
             android:name=".EscolarActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+
+            android:name=".modelos.AdminPropuestas"
+            android:exported="false" />
+
+        <activity
+            android:name=".CrearPropuesta"
+            android:exported="false" />
+        <activity
+            android:name=".MaterialDeAyuda"
+
             android:exported="false" />
         <activity
             android:name=".HistoriaAyudaActivity"

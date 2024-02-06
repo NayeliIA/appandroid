@@ -2,7 +2,6 @@ package com.example.alumnos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.alumnos.modelos.AdminPropuestas;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -38,8 +38,12 @@ public class InicioActivity extends AppCompatActivity {
         atras5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent i = new Intent(InicioActivity.this, MainActivity.class);
                 startActivity(i);
+
+
             }
         });
         recuperarcontrasena = findViewById(R.id.recuperarcontrasena);
@@ -77,6 +81,8 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     private void login() {
+
+
         String correoL = correo.getText().toString();
         String contraseñaL = contraseña.getText().toString();
 
@@ -84,12 +90,15 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    if (correoL.equals("nayeliia230@gmail.com")) {
-                        Intent i = new Intent(InicioActivity.this, AdminActivity.class); // Reemplaza activity_admin con el nombre correcto de tu actividad
+
+                    if (correo.getText().toString().startsWith("luishiram")) {
+                        Intent i = new Intent(InicioActivity.this, AdminPropuestas.class);
                         startActivity(i);
+
                     } else {
                         Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
                         startActivity(i);
+
                     }
                 } else {
                     Toast.makeText(InicioActivity.this, "Correo/contraseña incorrectos", Toast.LENGTH_SHORT).show();
@@ -98,3 +107,5 @@ public class InicioActivity extends AppCompatActivity {
         });
     }
 }
+
+

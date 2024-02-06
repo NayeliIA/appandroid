@@ -2,6 +2,7 @@ package com.example.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,15 +44,17 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Materias.this, HistoriaAyudaActivity.class);
-                startActivity(i);
+                i.putExtra("materia","HISTORIA");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
         matematicas = findViewById(R.id.matematicas);
         matematicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this, MatematicasAyudaActivity.class);
-                startActivity(i);
+                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
+                i.putExtra("materia","MATEMATICAS");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
         filosofia = findViewById(R.id.filosofia);
@@ -59,7 +62,8 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Materias.this,FilosofiaAyudaActivity.class);
-                startActivity(i);
+                i.putExtra("materia","FILOSOFIA");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
         geografia = findViewById(R.id.geografia);
@@ -67,7 +71,8 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Materias.this,GeografiaAyudaActivity.class);
-                startActivity(i);
+                i.putExtra("materia","GEOGRAFIA");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
 
@@ -76,7 +81,8 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Materias.this,InglesAyudaActivity.class);
-                startActivity(i);
+                i.putExtra("materia","INGLES");
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
        /* esp = findViewById(R.id.esp);
