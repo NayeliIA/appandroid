@@ -12,9 +12,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -78,6 +85,57 @@ public class InicioActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
+// Verificar si hay un usuario actualmente autenticado
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//
+//        if (currentUser != null) {
+//
+//            String uid = currentUser.getUid();
+//            String email = currentUser.getEmail();
+//
+//            db.collection("Users").document(uid).get()
+//                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                        @Override
+//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                            if (documentSnapshot.exists()) {
+//                                // El documento existe, puedes acceder a sus datos
+//                                Map<String, Object> datos = documentSnapshot.getData();
+//                                String rolUsuario = datos.get("role").toString();
+//
+//                                if(rolUsuario.equals("1")){
+//
+//                                    Intent i = new Intent(InicioActivity.this, AdminPropuestas.class);
+//                                    startActivity(i);
+//
+//                                }else{
+//
+//                                    Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+//                                    startActivity(i);
+//
+//                                }
+//
+//
+//
+//                            } else {
+//                                // El documento no existe
+//
+//                            }
+//                        }
+//                    })
+//                    .addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            // Manejar el fallo en la operación
+//
+//                        }
+//                    });
+//
+//        }
 
 
     }

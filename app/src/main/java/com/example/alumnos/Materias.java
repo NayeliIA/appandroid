@@ -42,7 +42,8 @@ ImageView atras1;
         historia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this, HistoriaAyudaActivity.class);
+                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
+                i.putExtra("materia","HISTORIA");
                 startActivity(i);
             }
         });
@@ -59,7 +60,8 @@ ImageView atras1;
         filosofia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this,FilosofiaAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
+                i.putExtra("materia","FILOSOFIA");
                 startActivity(i);
             }
         });
@@ -67,7 +69,8 @@ ImageView atras1;
         geografia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this,GeografiaAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
+                i.putExtra("materia","GEOGRAFIA");
                 startActivity(i);
             }
         });
@@ -76,7 +79,8 @@ ImageView atras1;
         ingles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this,InglesAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
+                i.putExtra("materia","INGLES");
                 startActivity(i);
             }
         });
