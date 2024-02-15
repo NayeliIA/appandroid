@@ -43,9 +43,11 @@ ImageView atras1;
         historia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(Materias.this, HistoriaAyudaActivity.class);
                 i.putExtra("materia","HISTORIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
+
             }
         });
         matematicas = findViewById(R.id.matematicas);
@@ -61,18 +63,24 @@ ImageView atras1;
         filosofia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(Materias.this,FilosofiaAyudaActivity.class);
                 i.putExtra("materia","FILOSOFIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
+
+
             }
         });
         geografia = findViewById(R.id.geografia);
         geografia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(Materias.this,GeografiaAyudaActivity.class);
                 i.putExtra("materia","GEOGRAFIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
+
+
             }
         });
 
@@ -80,9 +88,15 @@ ImageView atras1;
         ingles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(Materias.this,InglesAyudaActivity.class);
                 i.putExtra("materia","INGLES");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
+
+               /* Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
+                i.putExtra("materia","INGLES");
+                startActivity(i);*/
+
             }
         });
        /* esp = findViewById(R.id.esp);

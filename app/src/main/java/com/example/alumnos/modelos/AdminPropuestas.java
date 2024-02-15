@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class AdminPropuestas extends AppCompatActivity {
 
-   final String[] opciones = {"SELECCIONA LA MATERIA", "MATEMATICAS", "ESPAÑOL "};
+   final String[] opciones = {"SELECCIONA LA MATERIA", "MATEMATICAS", "GEOGRAFIA", "HISTORIA", "INGLES", "FILOSOFIA"};
 
     private Spinner materias;
     private Button btnBuscar;
@@ -128,7 +128,13 @@ public class AdminPropuestas extends AppCompatActivity {
                                             System.out.println("Se elimino correctamente");
 
                                             //radioGroup.removeView( radioGroup.getChildAt(materialSeleccionadoIndex) );
+                                            propuestas.clear();
+                                            radioGroup.removeAllViews();
+
+
                                             cargarPropuestasMateria(materia);
+
+
 
 
                                         })
@@ -144,6 +150,7 @@ public class AdminPropuestas extends AppCompatActivity {
                             public void onFailure(@NonNull Exception e) {
                                 // Error al registrar el documento
                                 //Log.e("Firestore", "Error al registrar el documento", e);
+
                             }
                         });
 
@@ -164,7 +171,25 @@ public class AdminPropuestas extends AppCompatActivity {
                     return;
                 }
 
-                cargarPropuestasMateria(materia);
+                db.collection("propuestas").document( propuestas.get(materialSeleccionadoIndex).getId() )
+                        .delete()
+                        .addOnSuccessListener(aVoid -> {
+
+                            System.out.println("Se elimino correctamente");
+
+                            //radioGroup.removeView( radioGroup.getChildAt(materialSeleccionadoIndex) );
+                            propuestas.clear();
+                            radioGroup.removeAllViews();
+
+                            cargarPropuestasMateria(materia);
+
+
+                        })
+                        .addOnFailureListener(e -> {
+
+                        });
+
+
 
 
             }
@@ -182,8 +207,6 @@ public class AdminPropuestas extends AppCompatActivity {
 
     private void cargarPropuestasMateria(String materia){
 
-        propuestas.clear();
-        radioGroup.removeAllViewsInLayout();
 
         db.collection("propuestas")
                 //Con esto se consulta las propuestas con la condicion de que la propiedad materia tenga el nombre de la materia seleccionada

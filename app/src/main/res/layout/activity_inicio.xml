@@ -19,7 +19,7 @@
         android:backgroundTint="#E3E3E3"
         android:ems="10"
         android:foregroundTint="#757373"
-        android:hint="    Correo"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
         android:singleLine="false"
         android:textAllCaps="false"

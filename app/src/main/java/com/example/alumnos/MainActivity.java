@@ -28,8 +28,13 @@ public class MainActivity extends AppCompatActivity {
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(MainActivity.this, InicioActivity.class);
                 //Intent i = new Intent(MainActivity.this, Materias.class);
+
+                //Intent i = new Intent(MainActivity.this, InicioActivity.class);
+               // Intent i = new Intent(MainActivity.this, InicioActivity.class);
+
                 startActivity(i);
             }
         });
@@ -39,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 //        FirebaseFirestore db = FirebaseFirestore.getInstance();
 //
 //        for(int a=0 ; a< 21; a++){
-//            db.collection("propuestas").add(new MaterialDeAyuda("https://google.com","Prueba for "+a,"MATEMATICAS").registrarMap())
+//            db.collection("propuestas").add(new MaterialDeAyuda("https://google.com","Prueba for "+a,"HISTORIA").registrarMap())
 //                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
 //                        @Override
 //                        public void onSuccess(DocumentReference documentReference) {
