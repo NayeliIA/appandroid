@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this, InicioActivity.class);
+                Intent i = new Intent(MainActivity.this, AdminUsuarios.class);
                 //Intent i = new Intent(MainActivity.this, Materias.class);
 
                 //Intent i = new Intent(MainActivity.this, InicioActivity.class);

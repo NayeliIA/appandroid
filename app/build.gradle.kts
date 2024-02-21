@@ -48,6 +48,8 @@ dependencies {
     /*implementation("com.google.firebase:firebase-functions")*/
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation("androidx.navigation:navigation-fragment:2.6.0")
+    implementation("androidx.navigation:navigation-ui:2.6.0")
 
 
     testImplementation("junit:junit:4.13.2")

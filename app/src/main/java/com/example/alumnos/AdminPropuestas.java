@@ -1,30 +1,35 @@
-package com.example.alumnos.modelos;
+package com.example.alumnos;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
-import com.example.alumnos.R;
+import com.example.alumnos.modelos.MaterialDeAyuda;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AdminPropuestas extends AppCompatActivity {
 
-   final String[] opciones = {"SELECCIONA LA MATERIA", "MATEMATICAS", "GEOGRAFIA", "HISTORIA", "INGLES", "FILOSOFIA"};
+   final String[] opciones = {"SELECCIONA LA MATERIA", "MATEMATICAS", "ESPAÑOL "};
 
     private Spinner materias;
     private Button btnBuscar;
@@ -128,13 +133,7 @@ public class AdminPropuestas extends AppCompatActivity {
                                             System.out.println("Se elimino correctamente");
 
                                             //radioGroup.removeView( radioGroup.getChildAt(materialSeleccionadoIndex) );
-                                            propuestas.clear();
-                                            radioGroup.removeAllViews();
-
-
                                             cargarPropuestasMateria(materia);
-
-
 
 
                                         })
@@ -150,7 +149,6 @@ public class AdminPropuestas extends AppCompatActivity {
                             public void onFailure(@NonNull Exception e) {
                                 // Error al registrar el documento
                                 //Log.e("Firestore", "Error al registrar el documento", e);
-
                             }
                         });
 
@@ -171,25 +169,7 @@ public class AdminPropuestas extends AppCompatActivity {
                     return;
                 }
 
-                db.collection("propuestas").document( propuestas.get(materialSeleccionadoIndex).getId() )
-                        .delete()
-                        .addOnSuccessListener(aVoid -> {
-
-                            System.out.println("Se elimino correctamente");
-
-                            //radioGroup.removeView( radioGroup.getChildAt(materialSeleccionadoIndex) );
-                            propuestas.clear();
-                            radioGroup.removeAllViews();
-
-                            cargarPropuestasMateria(materia);
-
-
-                        })
-                        .addOnFailureListener(e -> {
-
-                        });
-
-
+                cargarPropuestasMateria(materia);
 
 
             }
@@ -207,6 +187,8 @@ public class AdminPropuestas extends AppCompatActivity {
 
     private void cargarPropuestasMateria(String materia){
 
+        propuestas.clear();
+        radioGroup.removeAllViewsInLayout();
 
         db.collection("propuestas")
                 //Con esto se consulta las propuestas con la condicion de que la propiedad materia tenga el nombre de la materia seleccionada
