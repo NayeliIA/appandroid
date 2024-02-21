@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Alumnos</string>
     <string-array name="languages">
-        <item> </item>
         <item>1° Semestre</item>
         <item>2° Semestre</item>
         <item>3° Semestre</item>
@@ -11,24 +10,12 @@
     </string-array>
 
     <string-array name="grado">
-        <item> </item>
         <item>1° Grado</item>
         <item>2° Grado</item>
         <item>3° Grado</item>
-    </string-array>
-
-    <string-array name="primaria">
-        <item> </item>
-        <item>1° Grado</item>
-        <item>2° Grado</item>
-        <item>3° Grado</item>
-        <item>4° Grado</item>
-        <item>5° Grado</item>
-        <item>6° Grado</item>
     </string-array>
 
     <string-array name="nivel">
-        <item>Primaria</item>
         <item>Secundaria</item>
         <item>Preparatoria</item>
     </string-array>

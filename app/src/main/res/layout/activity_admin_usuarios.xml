@@ -9,58 +9,92 @@
     <EditText
         android:id="@+id/correoUsuario"
         android:layout_width="268dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="Correo"
+        android:textColor="#0F3341"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <Button
         android:id="@+id/btnBuscarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#0F3341"
         android:text="BUSCAR"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.219" />
 
     <Button
         android:id="@+id/btnActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ACTUALIZAR"
+        android:backgroundTint="#0F3341"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/fondo1" />
 
     <TextView
         android:id="@+id/usuarioNombre"
         android:layout_width="144dp"
         android:layout_height="36dp"
         android:text="Nombre: "
+        android:textColor="#0F3341"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.345" />
 
     <Spinner
         android:id="@+id/rolesSpinner"
         android:layout_width="309dp"
-        android:layout_height="33dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="158dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:text="Cambio de rol"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 </androidx.constraintlayout.widget.ConstraintLayout>

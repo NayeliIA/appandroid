@@ -141,8 +141,8 @@ public class InicioActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    if (correo.getText().toString().startsWith("luishiram")) {
-                        Intent i = new Intent(InicioActivity.this, AdminPropuestas.class);
+                    if (correo.getText().toString().startsWith("nayeli.garcia")) {
+                        Intent i = new Intent(InicioActivity.this, AdminInicio.class);
                         startActivity(i);
 
                     } else {

@@ -50,10 +50,7 @@ public class EscolarActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String nivelSeleccionado = (String) spinnernivel.getSelectedItem();
-                if (nivelSeleccionado.equals("Primaria")) {
-                    Intent i = new Intent(EscolarActivity.this, Primaria.class);
-                    startActivity(i);
-                } else {
+
                     if (nivelSeleccionado.equals("Secundaria")) {
                         Intent i = new Intent(EscolarActivity.this, Secundaria.class);
                         startActivity(i);
@@ -64,7 +61,6 @@ public class EscolarActivity extends AppCompatActivity {
                         }
                     }
                 }
-            }
-        });
-    }
+            });
+        }
 }

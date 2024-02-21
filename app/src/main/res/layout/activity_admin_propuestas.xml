@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modelos.AdminPropuestas">
+    tools:context="AdminPropuestas">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -32,7 +32,7 @@
     <Spinner
         android:id="@+id/listaMaterias"
         android:layout_width="244dp"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:background="#A8EAFF"
         android:backgroundTint="#99D8DD"
         android:spinnerMode="dropdown"
@@ -49,20 +49,20 @@
         android:layout_height="36dp"
         android:text="PROPUESTAS"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#0F3341"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="58dp"
-        android:layout_height="44dp"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.953"

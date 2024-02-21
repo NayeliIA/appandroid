@@ -77,13 +77,13 @@ public class AdminPropuestas extends AppCompatActivity {
                 // Acciones a realizar cuando se selecciona un RadioButton
                 String textoSeleccionado = radioButton.getText().toString();
 
-                System.out.println("Se selecciono "+ textoSeleccionado);
+                System.out.println("Se seleccionó "+ textoSeleccionado);
 
                 final int seleccionado = group.indexOfChild(radioButton);
 
                 materialSeleccionadoIndex = seleccionado;
 
-                System.out.println("Se selecciono "+ seleccionado);
+                System.out.println("Se seleccionó "+ seleccionado);
 
                 openLink(propuestas.get(seleccionado).getLink());
 
