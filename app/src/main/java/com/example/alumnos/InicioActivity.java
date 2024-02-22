@@ -11,9 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Map;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -25,6 +31,8 @@ public class InicioActivity extends AppCompatActivity {
     Button btnEntrar;
     FirebaseAuth mAuth;
 
+    FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +41,8 @@ public class InicioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 
         atras5 = findViewById(R.id.atras5);
+
+        db = FirebaseFirestore.getInstance();
 
         atras5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,42 +98,7 @@ public class InicioActivity extends AppCompatActivity {
 //            String uid = currentUser.getUid();
 //            String email = currentUser.getEmail();
 //
-//            db.collection("Users").document(uid).get()
-//                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//                        @Override
-//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                            if (documentSnapshot.exists()) {
-//                                // El documento existe, puedes acceder a sus datos
-//                                Map<String, Object> datos = documentSnapshot.getData();
-//                                String rolUsuario = datos.get("role").toString();
-//
-//                                if(rolUsuario.equals("1")){
-//
-//                                    Intent i = new Intent(InicioActivity.this, AdminPropuestas.class);
-//                                    startActivity(i);
-//
-//                                }else{
-//
-//                                    Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
-//                                    startActivity(i);
-//
-//                                }
-//
-//
-//
-//                            } else {
-//                                // El documento no existe
-//
-//                            }
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            // Manejar el fallo en la operación
-//
-//                        }
-//                    });
+
 //
 //        }
 
@@ -141,15 +116,47 @@ public class InicioActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    if (correo.getText().toString().startsWith("nayeli.garcia")) {
-                        Intent i = new Intent(InicioActivity.this, AdminInicio.class);
-                        startActivity(i);
 
-                    } else {
-                        Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
-                        startActivity(i);
 
-                    }
+                    db.collection("Users").document( task.getResult().getUser().getUid() ).get()
+                            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    if (documentSnapshot.exists()) {
+                                        // El documento existe, puedes acceder a sus datos
+                                        Map<String, Object> datos = documentSnapshot.getData();
+                                        String rolUsuario = datos.get("role").toString();
+
+                                        if(rolUsuario.equals("1")){
+
+                                            Intent i = new Intent(InicioActivity.this, AdminInicio.class);
+                                            startActivity(i);
+
+                                        }else{
+
+                                            Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+                                            startActivity(i);
+
+                                        }
+
+
+
+                                    } else {
+                                        // El documento no existe
+
+                                    }
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    // Manejar el fallo en la operación
+
+                                }
+                            });
+
+
+
                 } else {
                     Toast.makeText(InicioActivity.this, "Correo/contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }

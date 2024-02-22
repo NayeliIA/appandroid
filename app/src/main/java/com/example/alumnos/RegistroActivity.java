@@ -108,8 +108,8 @@ public class RegistroActivity extends AppCompatActivity {
                   String id = mAuth.getCurrentUser().getUid();
                   Map<String, Object> map = new HashMap<>();
                   map.put("name", name);
-                    map.put("email", email);
-                    map.put("role", 2);
+                  map.put("email", email);
+                  map.put("role", 2);
                     mFirestore.collection("Users").document(id).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

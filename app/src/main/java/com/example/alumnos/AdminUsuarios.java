@@ -146,6 +146,7 @@ public class AdminUsuarios extends AppCompatActivity {
                                 usuario = null;
                                 nombre.setText("Nombre: ");
                                 correoUsuario.setText("");
+                                roles.setSelection(0);
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

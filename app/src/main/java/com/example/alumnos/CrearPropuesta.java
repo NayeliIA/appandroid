@@ -48,8 +48,6 @@ public class CrearPropuesta extends AppCompatActivity {
                 String tema = editTextTema.getText().toString();
                 String link = editTextLink.getText().toString();
 
-
-
                 db.collection("propuestas").add(new MaterialDeAyuda(link,tema,materia).registrarMap())
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override

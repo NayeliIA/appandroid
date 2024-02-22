@@ -44,7 +44,7 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Materias.this, HistoriaAyudaActivity.class);
+                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
                 i.putExtra("materia","HISTORIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
@@ -64,7 +64,7 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Materias.this,FilosofiaAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","FILOSOFIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
@@ -76,7 +76,7 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Materias.this,GeografiaAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","GEOGRAFIA");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
@@ -89,7 +89,7 @@ ImageView atras1;
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Materias.this,InglesAyudaActivity.class);
+                Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","INGLES");
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class AdminPropuestas extends AppCompatActivity {
 
-   final String[] opciones = {"SELECCIONA LA MATERIA: ", "Filosofía", "Historia","Geografía","Inglés","Matemáticas",};
+   final String[] opciones = {"SELECCIONA LA MATERIA: ", "FILOSOFIA", "Historia","Geografía","Inglés","Matemáticas",};
 
     private Spinner materias;
     private Button btnBuscar;
