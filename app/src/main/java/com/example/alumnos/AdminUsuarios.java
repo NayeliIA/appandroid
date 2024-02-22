@@ -39,7 +39,7 @@ public class AdminUsuarios extends AppCompatActivity {
 
     Usuario usuario;
 
-    final String[] opciones = {"ROLE de usuario", "ESTUDIANTE", "ADMIN"};
+    final String[] opciones = {"", "ESTUDIANTE", "ADMIN"};
 
     private Spinner roles;
 
