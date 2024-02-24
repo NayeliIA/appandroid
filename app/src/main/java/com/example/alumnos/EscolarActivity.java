@@ -20,7 +20,7 @@ public class EscolarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escolar);
-        atras4 = findViewById(R.id.atras4);
+        atras4 = findViewById(R.id.atras5);
         spinnernivel = findViewById(R.id.spinner4);
 
 

@@ -3,7 +3,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +33,7 @@ public class CrearPropuesta extends AppCompatActivity {
         editTextTema = findViewById(R.id.editTextTema);
         editTextLink = findViewById(R.id.editTextLink);
 
-        atras4 = findViewById(R.id.atras4);
+        atras4 = findViewById(R.id.atras5);
 
         final String materia = getIntent().getStringExtra("materia");
 

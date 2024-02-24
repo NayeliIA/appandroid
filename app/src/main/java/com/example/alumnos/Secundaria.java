@@ -20,7 +20,7 @@ public class Secundaria extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secundaria);
-        atras4 = findViewById(R.id.atras4);
+        atras4 = findViewById(R.id.atras5);
         spinnergrado = findViewById(R.id.spinner2);
 
        /* // Recuperar el correo electrónico

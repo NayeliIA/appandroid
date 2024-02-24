@@ -3,16 +3,16 @@ package com.example.alumnos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.alumnos.modelos.MaterialDeAyuda;
 import com.example.alumnos.modelos.Usuario;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -34,7 +34,7 @@ public class AdminUsuarios extends AppCompatActivity {
 
     private TextView nombre;
 
-
+    ImageView atras5;
     FirebaseFirestore db;
 
     Usuario usuario;
@@ -43,12 +43,16 @@ public class AdminUsuarios extends AppCompatActivity {
 
     private Spinner roles;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_usuarios);
 
-
+        atras5 = findViewById(R.id.atras5);
         correoUsuario = findViewById(R.id.correoUsuario);
 
         btnBuscar = findViewById(R.id.btnBuscarUsuario);
@@ -66,8 +70,16 @@ public class AdminUsuarios extends AppCompatActivity {
 
         roles.setAdapter(adapter);
 
+        ImageView atras5;
 
-
+        atras5 = findViewById(R.id.atras5);
+        atras5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AdminUsuarios.this, AdminInicio.class);
+                startActivity(i);
+            }
+        });
 
 
 

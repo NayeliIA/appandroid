@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/atras4"
+        android:id="@+id/atras5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,17 +38,17 @@
         app:layout_constraintVertical_bias="0.188" />
 
     <ImageView
-        android:id="@+id/ingles1"
+        android:id="@+id/info"
         android:layout_width="115dp"
         android:layout_height="76dp"
         android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055"
-        app:srcCompat="@drawable/ayuda" />
+        app:layout_constraintVertical_bias="0.054"
+        app:srcCompat="@drawable/info" />
 
     <Button
         android:id="@+id/button"

@@ -19,7 +19,7 @@ public class SemestreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_semestre);
-        atras4 = findViewById(R.id.atras4);
+        atras4 = findViewById(R.id.atras5);
         spinnerLanguages = findViewById(R.id.spinner4);
         spinner2 = findViewById(R.id.spinner2);
 

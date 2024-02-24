@@ -7,7 +7,7 @@
     tools:context=".Primaria">
 
     <ImageView
-        android:id="@+id/atras4"
+        android:id="@+id/atras5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

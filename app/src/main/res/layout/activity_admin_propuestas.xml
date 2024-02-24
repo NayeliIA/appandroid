@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#A38080"
     tools:context="AdminPropuestas">
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="357dp"
-        android:layout_height="473dp"
+        android:layout_width="346dp"
+        android:layout_height="408dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,17 +32,19 @@
 
     <Spinner
         android:id="@+id/listaMaterias"
-        android:layout_width="244dp"
-        android:layout_height="48dp"
-        android:background="#A8EAFF"
-        android:backgroundTint="#99D8DD"
+        android:layout_width="223dp"
+        android:layout_height="46dp"
+        android:background="#87898A"
+        android:backgroundTint="#CAD0D1"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.141"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
     <TextView
         android:id="@+id/textView7"
@@ -73,16 +76,18 @@
 
     <Button
         android:id="@+id/btnBuscar"
-        android:layout_width="108dp"
-        android:layout_height="48dp"
+        android:layout_width="99dp"
+        android:layout_height="46dp"
         android:backgroundTint="#0F3341"
         android:text="BUSCAR"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.141"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnRechazar"
@@ -95,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.934" />
 
     <Button
         android:id="@+id/btnAceptar"
@@ -107,7 +112,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.934" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

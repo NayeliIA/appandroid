@@ -2,7 +2,6 @@ package com.example.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -48,8 +47,8 @@ public class AdminInicio extends AppCompatActivity {
         buttonfinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AdminInicio.this, MainActivity.class);
-                startActivity(i);
+               // Intent i = new Intent(AdminInicio.this, MainActivity.class);
+                finish();
             }
         });
 
