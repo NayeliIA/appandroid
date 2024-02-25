@@ -21,7 +21,7 @@ public class SemestreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_semestre);
         atras4 = findViewById(R.id.atras5);
         spinnerLanguages = findViewById(R.id.spinner4);
-        spinner2 = findViewById(R.id.spinner2);
+       // spinner2 = findViewById(R.id.spinner2);
 
        /* // Recuperar el correo electrónico
         Intent intent = getIntent();
@@ -34,8 +34,9 @@ public class SemestreActivity extends AppCompatActivity {
         atras4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SemestreActivity.this, EscolarActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(SemestreActivity.this, EscolarActivity.class);
+               // startActivity(i);
+                finish();
             }
         });
         // Crea el adaptador para el Spinner

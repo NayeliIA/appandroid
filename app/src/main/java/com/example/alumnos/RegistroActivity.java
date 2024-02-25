@@ -73,13 +73,12 @@ public class RegistroActivity extends AppCompatActivity {
         String password = contraseñaR.getText().toString();
         String confirmpassword = confirmarcontraseña.getText().toString();
 
-
         // Validamos que todos los campos estén llenos
         if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty() && !confirmpassword.isEmpty()) {
 
             if (isEmailValid(email)) {
                 if (password.equals(confirmpassword)) {
-                    if (password.length() >= 16) {
+                    if (password.length() >= 8) {
                         createUser(name, email, password);
                     }
                     else {

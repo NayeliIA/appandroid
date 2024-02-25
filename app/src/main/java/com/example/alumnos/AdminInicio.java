@@ -13,6 +13,7 @@ public class AdminInicio extends AppCompatActivity {
     Button buttonAdmin;
     Button buttonContenido;
     Button buttonfinish;
+    Button buttonsubir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,15 @@ public class AdminInicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AdminInicio.this, AdminPropuestas.class);
+                startActivity(i);
+            }
+        });
+
+        buttonsubir = findViewById(R.id.buttonsubir);
+        buttonsubir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AdminInicio.this, AdminCrearPropuesta.class);
                 startActivity(i);
             }
         });

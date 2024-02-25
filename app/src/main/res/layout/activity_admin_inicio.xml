@@ -7,6 +7,20 @@
     tools:context=".AdminInicio">
 
     <Button
+        android:id="@+id/buttonsubir"
+        android:layout_width="205dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#0F3341"
+        android:text="Subir contenido"
+        android:textColor="#F8F7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
+    <Button
         android:id="@+id/buttonfinish"
         android:layout_width="100dp"
         android:layout_height="48dp"
@@ -26,15 +40,15 @@
         android:id="@+id/buttonContenido"
         android:layout_width="205dp"
         android:layout_height="61dp"
-        android:textColor="#F8F7F7"
         android:backgroundTint="#0F3341"
         android:text="Verificar contenido"
+        android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -72,9 +86,8 @@
         android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.348" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
