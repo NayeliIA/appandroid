@@ -23,6 +23,8 @@ public class Secundaria extends AppCompatActivity {
         atras4 = findViewById(R.id.atras5);
         spinnergrado = findViewById(R.id.spinner2);
 
+        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+
        /* // Recuperar el correo electrónico
         Intent intent = getIntent();
         String correoElectronico = intent.getStringExtra("CORREO_ELECTRONICO");
@@ -57,12 +59,36 @@ public class Secundaria extends AppCompatActivity {
         buttonok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String gradoSeleccionado = (String) spinnergrado.getSelectedItem();
-                if(gradoSeleccionado.equals("5° S")) {
+
+
+
                     Intent i = new Intent(Secundaria.this, Materias.class);
-                    //startActivity(i);
-                }
+
+                    final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+
+                    i.putExtra("nivelEducacion",nivelEducacion);
+
+                    i.putExtra("grado", gradoSpinner());
+
+                    startActivity(i);
+
             }
         });
     }
+
+
+    private String gradoSpinner(){
+
+        final String opcion = spinnergrado.getSelectedItem().toString();
+
+        if(opcion.startsWith("1")){
+            return "1";
+        }else if(opcion.startsWith("2")){
+            return "2";
+        }else{
+            return "3";
+        }
+
+    };
+
 }

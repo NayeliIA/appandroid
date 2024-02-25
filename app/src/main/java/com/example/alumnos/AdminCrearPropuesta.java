@@ -3,6 +3,7 @@ package com.example.alumnos;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +28,17 @@ public class AdminCrearPropuesta extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    final String[] opciones = {"SELECCIONA LA MATERIA: ", "FILOSOFIA", "HISTORIA","GEOGRAFIA","INGLES","MATEMATICAS",};
+    final String[] opciones = {"SELECCIONA LA MATERIA: ", "FILOSOFIA", "HISTORIA","GEOGRAFIA","INGLES","MATEMATICAS"};
+
+    final String[] opcionesNivelEstudio = {"SECUNDARIA","PREPARATORIA"};
+
+
 
     private Spinner materias;
+
+    private Spinner nivelEducacionSpinner;
+
+    private Spinner gradoSpiner;
 
 
 
@@ -54,11 +63,45 @@ public class AdminCrearPropuesta extends AppCompatActivity {
 
         this.materias = findViewById(R.id.listaMateriasAdmin);
 
+        nivelEducacionSpinner = findViewById(R.id.nivelEducacionSpinner);
+        gradoSpiner = findViewById(R.id.gradoSpinner);
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opciones);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         materias.setAdapter(adapter);
 
+
+        ArrayAdapter<String> adapterNivelEstudio = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opcionesNivelEstudio);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        nivelEducacionSpinner.setAdapter(adapterNivelEstudio);
+
+
+
+
+        nivelEducacionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+                final String[] grados = nivelEducacionSpinner.getSelectedItem().toString().equals("SECUNDARIA") ? new String[]{"1","2","3"} : new String[]{"1","2","3","4","5","6","7"};
+
+                ArrayAdapter<String> adapterGrado = new ArrayAdapter<>(AdminCrearPropuesta.this, android.R.layout.simple_spinner_item, grados);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+                gradoSpiner.setAdapter(adapterGrado);
+
+                // Tu código aquí se ejecutará cuando se seleccione una opción del spinner
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Tu código aquí se ejecutará cuando no se seleccione ninguna opción del spinner
+            }
+        });
 
 
 
@@ -68,9 +111,11 @@ public class AdminCrearPropuesta extends AppCompatActivity {
                 String tema = editTextTema.getText().toString();
                 String link = editTextLink.getText().toString();
 
+                final String nivelEducacion = nivelEducacionSpinner.getSelectedItem().toString();
 
+                final int grado = Integer.parseInt(gradoSpiner.getSelectedItem().toString() ) ;
 
-                db.collection("material").add(new MaterialDeAyuda(link,tema,materias.getSelectedItem().toString()).registrarMap())
+                db.collection("material").add(new MaterialDeAyuda(link,tema,materias.getSelectedItem().toString(), nivelEducacion, grado).registrarMap())
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {

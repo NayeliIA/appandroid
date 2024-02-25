@@ -21,6 +21,8 @@ public class SemestreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_semestre);
         atras4 = findViewById(R.id.atras5);
         spinnerLanguages = findViewById(R.id.spinner4);
+
+        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
        // spinner2 = findViewById(R.id.spinner2);
 
        /* // Recuperar el correo electrónico
@@ -57,12 +59,45 @@ public class SemestreActivity extends AppCompatActivity {
         buttonok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String semestreSeleccionado = (String) spinnerLanguages.getSelectedItem();
-                if(semestreSeleccionado.equals("5° Semestre")) {
+
                     Intent i = new Intent(SemestreActivity.this, Materias.class);
+
+                final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+
+                i.putExtra("nivelEducacion",nivelEducacion);
+
+                i.putExtra("grado", gradoSpinner());
+
                     startActivity(i);
-                }
+
             }
         });
     }
+
+
+    private String gradoSpinner(){
+
+        final String opcion = spinnerLanguages.getSelectedItem().toString();
+
+        if(opcion.startsWith("1")){
+            return "1";
+        }else if(opcion.startsWith("2")){
+            return "2";
+        }
+        else if(opcion.startsWith("3")){
+            return "3";
+        }
+        else if(opcion.startsWith("4")){
+            return "4";
+        }
+        else if(opcion.startsWith("5")){
+            return "5";
+        }
+        else if(opcion.startsWith("6")){
+            return "6";
+        }else{
+            return "1";
+        }
+
+    };
 }

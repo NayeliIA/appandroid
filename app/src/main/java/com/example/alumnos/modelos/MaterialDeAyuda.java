@@ -14,24 +14,50 @@ public class MaterialDeAyuda {
 
     private  String materia;
 
+    private String nivelEducacion;
+
+    private int grado;
+
     public MaterialDeAyuda(String id, Map<String, Object> document){
         this.id = id;
         this.link =  document.get("link").toString();
         this.tema = document.get("tema").toString();
         this.materia = document.get("materia").toString();
+        this.nivelEducacion = document.get("nivelEducacion").toString();
+        this.grado = Integer.parseInt(document.get("grado").toString()) ;
     }
 
-    public MaterialDeAyuda(String id,String link, String tema, String materia){
+    public MaterialDeAyuda(String id,String link, String tema, String materia, String nivelEducacion, int grado){
         this.id = id;
         this.link = link;
         this.tema = tema;
         this.materia = materia;
+        this.nivelEducacion = nivelEducacion;
+        this.grado =grado;
     }
 
-    public MaterialDeAyuda(String link, String tema, String materia){
+    public MaterialDeAyuda(String link, String tema, String materia,String nivelEducacion, int grado){
         this.link = link;
         this.tema = tema;
         this.materia = materia;
+        this.nivelEducacion = nivelEducacion;
+        this.grado =grado;
+    }
+
+    public String getNivelEducacion() {
+        return nivelEducacion;
+    }
+
+    public int getGrado() {
+        return grado;
+    }
+
+    public void setGrado(int grado) {
+        this.grado = grado;
+    }
+
+    public void setNivelEducacion(String nivelEducacion) {
+        this.nivelEducacion = nivelEducacion;
     }
 
     public String getId() {
@@ -72,6 +98,9 @@ public class MaterialDeAyuda {
             put("link", getLink());
             put("tema", getTema());
             put("materia", getMateria());
+            put("nivelEducacion",getNivelEducacion());
+            put("grado", getGrado());
+
         }};
 
     }

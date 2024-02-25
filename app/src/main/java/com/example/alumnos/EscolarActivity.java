@@ -54,10 +54,15 @@ public class EscolarActivity extends AppCompatActivity {
 
                     if (nivelSeleccionado.equals("Secundaria")) {
                         Intent i = new Intent(EscolarActivity.this, Secundaria.class);
+
+                        i.putExtra("nivelEducacion","SECUNDARIA");
+
                         startActivity(i);
                     } else {
                         if (nivelSeleccionado.equals("Preparatoria")) {
                             Intent i = new Intent(EscolarActivity.this, SemestreActivity.class);
+
+                            i.putExtra("nivelEducacion","PREPARATORIA");
                             startActivity(i);
                         }
                     }

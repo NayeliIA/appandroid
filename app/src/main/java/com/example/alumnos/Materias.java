@@ -24,6 +24,9 @@ ImageView atras1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materias);
         atras1 = findViewById(R.id.atras1);
+
+        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+        final String grado = getIntent().getStringExtra("grado");
         atras1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +48,10 @@ ImageView atras1;
 
                 Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
                 i.putExtra("materia","HISTORIA");
+
+                i.putExtra("nivelEducacion",nivelEducacion);
+                i.putExtra("grado", grado);
+
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
             }
@@ -55,6 +62,8 @@ ImageView atras1;
             public void onClick(View v) {
                 Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
                 i.putExtra("materia","MATEMATICAS");
+                i.putExtra("nivelEducacion",nivelEducacion);
+                i.putExtra("grado", grado);
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
             }
         });
@@ -65,6 +74,8 @@ ImageView atras1;
 
                 Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","FILOSOFIA");
+                i.putExtra("nivelEducacion",nivelEducacion);
+                i.putExtra("grado", grado);
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
 
@@ -77,6 +88,8 @@ ImageView atras1;
 
                 Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","GEOGRAFIA");
+                i.putExtra("nivelEducacion",nivelEducacion);
+                i.putExtra("grado", grado);
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
 
@@ -90,6 +103,8 @@ ImageView atras1;
 
                 Intent i = new Intent(Materias.this,MaterialDeAyuda.class);
                 i.putExtra("materia","INGLES");
+                i.putExtra("nivelEducacion",nivelEducacion);
+                i.putExtra("grado", grado);
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
 
                /* Intent i = new Intent(Materias.this,MaterialDeAyuda.class);

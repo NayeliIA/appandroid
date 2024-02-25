@@ -36,6 +36,8 @@ public class CrearPropuesta extends AppCompatActivity {
         atras5 = findViewById(R.id.atras5);
 
         final String materia = getIntent().getStringExtra("materia");
+        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+        final String grado = getIntent().getStringExtra("grado");
 
 
 
@@ -47,7 +49,7 @@ public class CrearPropuesta extends AppCompatActivity {
                 String tema = editTextTema.getText().toString();
                 String link = editTextLink.getText().toString();
 
-                db.collection("propuestas").add(new MaterialDeAyuda(link,tema,materia).registrarMap())
+                db.collection("propuestas").add(new MaterialDeAyuda(link,tema,materia, nivelEducacion, Integer.parseInt(grado) ).registrarMap())
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
