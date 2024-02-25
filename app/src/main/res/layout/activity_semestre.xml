@@ -25,6 +25,7 @@
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:background="#E3E3E3"
+        android:textColor="#070707"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

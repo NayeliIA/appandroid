@@ -76,8 +76,9 @@ public class AdminUsuarios extends AppCompatActivity {
         atras5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AdminUsuarios.this, AdminInicio.class);
-                startActivity(i);
+               // Intent i = new Intent(AdminUsuarios.this, AdminInicio.class);
+                //startActivity(i);
+                finish();
             }
         });
 

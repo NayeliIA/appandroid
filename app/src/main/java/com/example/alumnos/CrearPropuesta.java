@@ -21,7 +21,7 @@ public class CrearPropuesta extends AppCompatActivity {
     private EditText editTextTema;
     private EditText editTextLink;
 
-    ImageView atras4;
+    ImageView atras5;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -33,7 +33,7 @@ public class CrearPropuesta extends AppCompatActivity {
         editTextTema = findViewById(R.id.editTextTema);
         editTextLink = findViewById(R.id.editTextLink);
 
-        atras4 = findViewById(R.id.atras5);
+        atras5 = findViewById(R.id.atras5);
 
         final String materia = getIntent().getStringExtra("materia");
 
@@ -76,7 +76,7 @@ public class CrearPropuesta extends AppCompatActivity {
             }
         });
 
-        atras4.setOnClickListener(new View.OnClickListener() {
+        atras5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#0F3341"
         android:text="ENTRAR"
+        android:textColor="#F8F7F7"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

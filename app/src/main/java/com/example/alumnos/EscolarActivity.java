@@ -27,8 +27,9 @@ public class EscolarActivity extends AppCompatActivity {
         atras4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(EscolarActivity.this, PaginaunoActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(EscolarActivity.this, PaginaunoActivity.class);
+                //startActivity(i);
+                finish();
             }
         });
         // Crea el adaptador para el Spinner

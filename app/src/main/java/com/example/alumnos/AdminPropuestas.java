@@ -94,6 +94,7 @@ public class AdminPropuestas extends AppCompatActivity {
         atras5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 finish();
             }
         });

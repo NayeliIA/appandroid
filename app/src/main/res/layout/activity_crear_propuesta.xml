@@ -76,6 +76,7 @@
         android:layout_height="48dp"
         android:backgroundTint="#0F3341"
         android:text="Subir"
+        android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

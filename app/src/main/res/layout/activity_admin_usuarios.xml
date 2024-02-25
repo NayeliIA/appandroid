@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AdminUsuarios">
 
-    <EditText
-        android:id="@+id/correoUsuario"
-        android:layout_width="249dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Correo"
-        android:textColor="#0F3341"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
-
     <Button
         android:id="@+id/btnBuscarUsuario"
         android:layout_width="wrap_content"
@@ -42,6 +26,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#0F3341"
         android:text="ACTUALIZAR"
+        android:textColor="#FAF7F7"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +55,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.345" />
@@ -81,9 +66,11 @@
         android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
+        app:layout_constraintVertical_bias="0.478" />
+
     <ImageView
         android:id="@+id/atras5"
         android:layout_width="wrap_content"
@@ -114,4 +101,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.09" />
+
+    <EditText
+        android:id="@+id/correoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:textColor="#070707"
+        android:textColorHint="#070707"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
 </androidx.constraintlayout.widget.ConstraintLayout>

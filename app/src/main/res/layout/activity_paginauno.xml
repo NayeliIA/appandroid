@@ -23,7 +23,7 @@
         android:layout_width="164dp"
         android:layout_height="48dp"
         android:backgroundTint="#0F3341"
-
+        android:textColor="#F8F7F7"
         android:text="Comenzar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

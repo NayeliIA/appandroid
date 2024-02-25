@@ -54,6 +54,7 @@
         android:id="@+id/button"
         android:layout_width="151dp"
         android:layout_height="61dp"
+        android:textColor="#F8F7F7"
         android:backgroundTint="#0F3341"
         android:onClick="onClickButton"
         android:text="Agregar información"
