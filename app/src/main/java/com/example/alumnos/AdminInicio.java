@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class AdminInicio extends AppCompatActivity {
-    ImageView atras5;
+
     Button buttonAdmin;
     Button buttonContenido;
     Button buttonfinish;
@@ -17,14 +17,7 @@ public class AdminInicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_inicio);
-        atras5 = findViewById(R.id.atras5);
-        atras5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(AdminInicio.this, InicioActivity.class);
-                startActivity(i);
-            }
-        });
+
 
         buttonAdmin = findViewById(R.id.buttonAdmin);
         buttonAdmin.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +40,9 @@ public class AdminInicio extends AppCompatActivity {
         buttonfinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent i = new Intent(AdminInicio.this, MainActivity.class);
+                Intent i = new Intent(AdminInicio.this, MainActivity.class);
+
+                startActivity(i);
                 finish();
             }
         });

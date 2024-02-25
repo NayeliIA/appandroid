@@ -27,8 +27,7 @@ ImageView atras1;
         atras1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Materias.this, PaginaunoActivity.class);
-                startActivity(i);
+                finish();
             }
         });
       /*  ingles = findViewById(R.id.ingles);

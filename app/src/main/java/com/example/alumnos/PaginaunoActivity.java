@@ -30,6 +30,8 @@ public class PaginaunoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(PaginaunoActivity.this, InicioActivity.class);
                 startActivity(i);
+
+                finish();
             }
         });
 

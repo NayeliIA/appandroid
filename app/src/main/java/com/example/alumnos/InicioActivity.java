@@ -139,7 +139,7 @@ public class InicioActivity extends AppCompatActivity {
 
                                         }
 
-
+                                            finish();
 
                                     } else {
                                         // El documento no existe
