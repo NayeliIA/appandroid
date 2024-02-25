@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0F3341"
+        android:textColor="#FAF7F7"
         android:text="BUSCAR"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,8 +105,8 @@
 
     <EditText
         android:id="@+id/correoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="214dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Correo"
         android:inputType="textEmailAddress"
