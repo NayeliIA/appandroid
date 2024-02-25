@@ -62,6 +62,9 @@
             android:name=".InicioActivity"
             android:exported="false" />
         <activity
+            android:name=".AdminCrearPropuesta"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
