@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_selflearning"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_selflearning_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alumnos"
         tools:targetApi="31">
@@ -18,77 +18,37 @@
         <activity
             android:name=".AdminUsuarios"
             android:exported="false" />
-        <activity
-            android:name=".AdminTabs"
-            android:exported="false" />
+
         <activity
             android:name=".AdminPropuestas"
             android:exported="false" />
         <activity
             android:name=".Secundaria"
             android:exported="false" />
-        <activity
-            android:name=".Primaria"
-            android:exported="false" />
+
         <activity
             android:name=".EscolarActivity"
             android:exported="false" />
-        <activity
-            android:name=".modelos.AdminPropuestas"
-            android:exported="false" />
+
         <activity
             android:name=".CrearPropuesta"
             android:exported="false" />
         <activity
             android:name=".MaterialDeAyuda"
             android:exported="false" />
-        <activity
-            android:name=".HistoriaAyudaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".InglesAyudaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GeografiaAyudaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FilosofiaAyudaActivity"
-            android:exported="false" />
+
+
         <activity
             android:name=".AgregarActivity"
             android:exported="false" />
-        <activity
-            android:name=".MatematicasAyudaActivity"
-            android:exported="false"
-            android:label="@string/title_activity_matematicas_ayuda"
-            android:theme="@style/Theme.Alumnos.NoActionBar" />
-        <activity
-            android:name=".GuerramundialActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SemestreActivity"
             android:exported="false" />
         <activity
             android:name=".RecuperarActivity"
             android:exported="false" />
-        <activity
-            android:name=".QuimicaInicio"
-            android:exported="false" />
-        <activity
-            android:name=".MatematicasInicio"
-            android:exported="false" />
-        <activity
-            android:name=".FisicaInicio"
-            android:exported="false" />
-        <activity
-            android:name=".FilosofiaInicio"
-            android:exported="false" />
-        <activity
-            android:name=".HistoriaInicio"
-            android:exported="false" />
-        <activity
-            android:name=".InglesInicio"
-            android:exported="false" />
+
         <activity
             android:name=".Materias"
             android:exported="false" />

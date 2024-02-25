@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Alumnos</string>
+    <string name="app_name">Self-Learning</string>
     <string-array name="languages">
         <item>1° Semestre</item>
         <item>2° Semestre</item>

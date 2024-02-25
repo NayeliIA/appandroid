@@ -84,7 +84,6 @@
         android:id="@+id/contraseñaR"
         android:layout_width="377dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="132dp"
         android:background="#E3E3E3"
         android:ems="10"
         android:hint="  Contraseña"
@@ -94,14 +93,14 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
 
     <EditText
         android:id="@+id/confirmarcontraseña"
         android:layout_width="377dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="204dp"
         android:background="#E3E3E3"
         android:ems="10"
         android:hint="  Confirmar contraseña"
@@ -113,13 +112,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683" />
 
     <EditText
         android:id="@+id/telefono"
         android:layout_width="377dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="284dp"
         android:background="#E3E3E3"
         android:ems="10"
         android:inputType="text"
@@ -129,7 +129,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576" />
 
     <TextView
         android:id="@+id/textView7"

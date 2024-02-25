@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,7 +38,7 @@ public class AdminPropuestas extends AppCompatActivity {
     private Button btnAceptar;
 
     private Button btnRechazar;
-
+    ImageView atras5;
     //private LinearLayout container;
 
     private ArrayList<MaterialDeAyuda> propuestas = new ArrayList<MaterialDeAyuda>();
@@ -89,7 +90,13 @@ public class AdminPropuestas extends AppCompatActivity {
 
             }
         });
-
+        atras5 = findViewById(R.id.atras5);
+        atras5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

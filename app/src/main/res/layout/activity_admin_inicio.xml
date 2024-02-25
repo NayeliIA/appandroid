@@ -12,7 +12,7 @@
         android:layout_height="48dp"
         android:backgroundTint="#2C6C85"
         android:text="Cerrar Sesión"
-        android:textSize="8sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.887"
@@ -21,13 +21,12 @@
         app:layout_constraintVertical_bias="0.938" />
 
 
-
     <Button
         android:id="@+id/buttonContenido"
-        android:layout_width="178dp"
-        android:layout_height="48dp"
-        android:text="Verificar contenido"
+        android:layout_width="205dp"
+        android:layout_height="61dp"
         android:backgroundTint="#0F3341"
+        android:text="Verificar contenido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
@@ -79,10 +78,10 @@
 
     <Button
         android:id="@+id/buttonAdmin"
-        android:layout_width="170dp"
-        android:layout_height="48dp"
-        android:text="Actualizar rol"
+        android:layout_width="189dp"
+        android:layout_height="53dp"
         android:backgroundTint="#0F3341"
+        android:text="Actualizar rol"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"

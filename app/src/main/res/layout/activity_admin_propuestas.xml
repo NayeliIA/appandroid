@@ -45,11 +45,25 @@
         app:layout_constraintVertical_bias="0.141"
         tools:ignore="TouchTargetSizeCheck" />
 
+    <ImageView
+        android:id="@+id/atras5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#04136C"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/backimage"
+        app:tint="#0F3341" />
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="120dp"
-        android:layout_height="36dp"
+        android:layout_width="142dp"
+        android:layout_height="38dp"
+        android:gravity="center"
         android:text="PROPUESTAS"
         android:textAlignment="center"
         android:textColor="#0F3341"
@@ -80,7 +94,7 @@
         android:layout_height="46dp"
         android:backgroundTint="#0F3341"
         android:text="BUSCAR"
-        android:textSize="12sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.897"
