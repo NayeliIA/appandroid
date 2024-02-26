@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/buttonsubir"
         android:layout_width="205dp"
-        android:layout_height="61dp"
+        android:layout_height="62dp"
         android:backgroundTint="#0F3341"
         android:text="Subir contenido"
         android:textColor="#F8F7F7"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <Button
         android:id="@+id/buttonfinish"
@@ -39,7 +39,7 @@
     <Button
         android:id="@+id/buttonContenido"
         android:layout_width="205dp"
-        android:layout_height="61dp"
+        android:layout_height="62dp"
         android:backgroundTint="#0F3341"
         android:text="Verificar contenido"
         android:textColor="#F8F7F7"
@@ -79,15 +79,16 @@
 
     <Button
         android:id="@+id/buttonAdmin"
-        android:layout_width="189dp"
-        android:layout_height="53dp"
+        android:layout_width="209dp"
+        android:layout_height="62dp"
         android:backgroundTint="#0F3341"
         android:text="Actualizar rol"
         android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.351" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,13 +52,14 @@ public class EscolarActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String nivelSeleccionado = (String) spinnernivel.getSelectedItem();
 
-                    if (nivelSeleccionado.equals("Secundaria")) {
+                    /*if (nivelSeleccionado.equals("Secundaria")) {
                         Intent i = new Intent(EscolarActivity.this, Secundaria.class);
 
                         i.putExtra("nivelEducacion","SECUNDARIA");
 
-                        startActivity(i);
-                    } else {
+                        startActivity(i);*/
+                    /*} else { */
+
                         if (nivelSeleccionado.equals("Preparatoria")) {
                             Intent i = new Intent(EscolarActivity.this, SemestreActivity.class);
 
@@ -66,7 +67,7 @@ public class EscolarActivity extends AppCompatActivity {
                             startActivity(i);
                         }
                     }
-                }
-            });
+                });
+            //});
         }
 }

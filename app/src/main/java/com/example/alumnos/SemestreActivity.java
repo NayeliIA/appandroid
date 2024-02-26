@@ -59,17 +59,17 @@ public class SemestreActivity extends AppCompatActivity {
         buttonok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String grado = gradoSpinner();
+if(grado.equals("5")) {
+    Intent i = new Intent(SemestreActivity.this, Materias.class);
 
-                    Intent i = new Intent(SemestreActivity.this, Materias.class);
+    final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
 
-                final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+    i.putExtra("nivelEducacion", nivelEducacion);
 
-                i.putExtra("nivelEducacion",nivelEducacion);
-
-                i.putExtra("grado", gradoSpinner());
-
-                    startActivity(i);
-
+    i.putExtra("grado", gradoSpinner());
+    startActivity(i);
+}
             }
         });
     }
@@ -79,24 +79,24 @@ public class SemestreActivity extends AppCompatActivity {
 
         final String opcion = spinnerLanguages.getSelectedItem().toString();
 
-        if(opcion.startsWith("1")){
-            return "1";
-        }else if(opcion.startsWith("2")){
-            return "2";
-        }
-        else if(opcion.startsWith("3")){
-            return "3";
-        }
-        else if(opcion.startsWith("4")){
-            return "4";
-        }
-        else if(opcion.startsWith("5")){
+        //if(opcion.startsWith("1")){
+          //  return "1";
+        //}else if(opcion.startsWith("2")){
+           // return "2";
+       // }
+       // else if(opcion.startsWith("3")){
+          //  return "3";
+       // }
+       // else if(opcion.startsWith("4")){
+           // return "4";
+       // }
+        if(opcion.startsWith("5")){
             return "5";
         }
-        else if(opcion.startsWith("6")){
-            return "6";
-        }else{
-            return "1";
+       // else if(opcion.startsWith("6")){
+            //return "6";
+        else{
+            return "";
         }
 
     };
