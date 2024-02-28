@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".RegistroActivity">
+    tools:context="com.example.alumnos.RegistroActivity">
 
     <Button
         android:id="@+id/btnRecuperar"
@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="84dp"
-        android:layout_height="69dp"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
@@ -45,22 +45,24 @@
 
     <EditText
         android:id="@+id/nombre"
-        android:layout_width="379dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:background="#E3E3E3"
+        android:layout_width="378dp"
+        android:layout_height="49dp"
+        android:background="#131313"
+        android:backgroundTint="#E3E3E3"
         android:ems="10"
-        android:hint="Nombre"
-        android:inputType="text"
-        android:text="  Nombre"
-        android:textColor="#070707"
-        android:textColorHint="#070707"
+        android:foregroundTint="#757373"
+        android:hint="  Nombre"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#292929"
         android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <EditText
         android:id="@+id/correoR"
@@ -94,9 +96,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
+        app:layout_constraintVertical_bias="0.676" />
 
     <EditText
         android:id="@+id/confirmarcontraseña"
@@ -115,39 +118,43 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <EditText
         android:id="@+id/telefono"
-        android:layout_width="377dp"
-        android:layout_height="48dp"
-        android:background="#E3E3E3"
+        android:layout_width="378dp"
+        android:layout_height="49dp"
+        android:background="#131313"
+        android:backgroundTint="#E3E3E3"
         android:ems="10"
-        android:inputType="text"
-        android:text="  Teléfono"
-        android:textColor="#070707"
+        android:foregroundTint="#757373"
+        android:hint="  Teléfono"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#292929"
         android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="156dp"
         android:layout_height="34dp"
         android:gravity="center"
-        android:text="Registrate"
+        android:text="REGISTRATE"
         android:textColor="#0F3341"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.21" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

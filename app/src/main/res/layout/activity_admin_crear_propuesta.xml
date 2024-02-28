@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearPropuesta">
+    tools:context="com.example.alumnos.CrearPropuesta">
 
     <Spinner
         android:id="@+id/listaMateriasAdmin"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="68dp"
-        android:layout_height="53dp"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
@@ -47,7 +47,7 @@
         app:tint="#0F3341"/>
 
     <EditText
-        android:id="@+id/editTextTema"
+        android:id="@+id/nombre"
         android:layout_width="343dp"
         android:layout_height="48dp"
         android:background="#131313"
@@ -103,7 +103,7 @@
         android:layout_height="58dp"
         android:backgroundTint="#0F3341"
         android:gravity="center"
-        android:text="¿Qué te gustaría                          agregar?"
+        android:text="¿QUÉ TE GUSTARÍA                          AGREGAR?"
         android:textColor="#0F3341"
         android:textSize="16sp"
         android:textStyle="bold"

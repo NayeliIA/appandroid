@@ -82,7 +82,7 @@ public class RegistroActivity extends AppCompatActivity {
                         createUser(name, email, password);
                     }
                     else {
-                        Toast.makeText(RegistroActivity.this, "La contraseña debe tener almenos 16 caracteres", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistroActivity.this, "La contraseña debe tener almenos 8 caracteres", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else {
@@ -115,14 +115,14 @@ public class RegistroActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Intent i = new Intent(RegistroActivity.this, InicioActivity.class);
                                 startActivity(i);
-                                Toast.makeText(RegistroActivity.this, "el usuario se almaceno correctamente", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegistroActivity.this, "El usuario se almacenó correctamente", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(RegistroActivity.this, "No se pudo registrar el usuario, intenta de nuevo", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 }
-                else{
-                    Toast.makeText(RegistroActivity.this, "No se pudo registrar el usuario", Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
 

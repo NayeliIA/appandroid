@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     android:backgroundTint="#676363"
-    tools:context=".MainActivity">
+    tools:context="com.example.alumnos.MainActivity">
 
     <EditText
         android:id="@+id/correo"

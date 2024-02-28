@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -30,7 +31,7 @@ public class CrearPropuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_propuesta);
 
-        editTextTema = findViewById(R.id.editTextTema);
+        editTextTema = findViewById(R.id.nombre);
         editTextLink = findViewById(R.id.editTextLink);
 
         atras5 = findViewById(R.id.atras5);
@@ -62,6 +63,7 @@ public class CrearPropuesta extends AppCompatActivity {
 
                                 //Retornamos que se registro correctamante para recargar la informacion
                                 setResult(Activity.RESULT_OK);
+                                Toast.makeText(CrearPropuesta.this, "Se subio con exito, esperar al administrador a que acepte la propuesta", Toast.LENGTH_SHORT).show();
                                 finish();
                             }
                         })

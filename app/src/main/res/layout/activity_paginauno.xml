@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".PaginaunoActivity">
+    tools:context="com.example.alumnos.PaginaunoActivity">
 
     <ImageView
         android:id="@+id/atras8"

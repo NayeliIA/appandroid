@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context=".Materias">
+    tools:context="com.example.alumnos.Materias">
 
     <Button
         android:id="@+id/matematicas"
@@ -68,9 +68,9 @@
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="5"
-        android:text="Materias"
+        android:text="MATERIAS"
         android:textColor="#0F3341"
-        android:textSize="34sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,8 +171,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="69dp"
-        android:layout_height="72dp"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.926"

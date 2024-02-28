@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class EscolarActivity extends AppCompatActivity {
 
@@ -65,6 +66,9 @@ public class EscolarActivity extends AppCompatActivity {
 
                             i.putExtra("nivelEducacion","PREPARATORIA");
                             startActivity(i);
+                        }
+                        else{
+                            Toast.makeText(EscolarActivity.this, "Por el momento solo se esta trabajando con preparatoria", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class SemestreActivity extends AppCompatActivity {
     private Spinner spinnerLanguages, spinner2;
@@ -60,7 +61,7 @@ public class SemestreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String grado = gradoSpinner();
-if(grado.equals("5")) {
+    if(grado.equals("5")) {
     Intent i = new Intent(SemestreActivity.this, Materias.class);
 
     final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
@@ -69,7 +70,9 @@ if(grado.equals("5")) {
 
     i.putExtra("grado", gradoSpinner());
     startActivity(i);
-}
+}else{
+        Toast.makeText(SemestreActivity.this, "Por el momento solo se esta trabajando con 5to semestre", Toast.LENGTH_SHORT).show();
+    }
             }
         });
     }

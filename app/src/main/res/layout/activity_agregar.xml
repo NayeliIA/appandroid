@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AgregarActivity">
+    tools:context="com.example.alumnos.AgregarActivity">
 
     <ImageView
         android:id="@+id/atras5"
@@ -19,8 +19,8 @@
         app:srcCompat="@drawable/backimage" />
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="84dp"
-        android:layout_height="69dp"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.948"
@@ -30,50 +30,50 @@
         app:srcCompat="@drawable/fondo1" />
 
     <EditText
-        android:id="@+id/editTextTema"
+        android:id="@+id/nombre"
         android:layout_width="356dp"
         android:layout_height="51dp"
+        android:background="#E3E3E3"
         android:hint="Ingresa el tema"
         android:textColor="#070707"
         android:textColorHint="#050505"
-        android:background="#E3E3E3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintVertical_bias="0.347" />
 
     <EditText
         android:id="@+id/editTextLink"
         android:layout_width="357dp"
         android:layout_height="52dp"
+        android:background="#E3E3E3"
         android:hint="Ingresa el link"
         android:textColor="#070707"
-        android:background="#E3E3E3"
         android:textColorHint="#050505"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
+        app:layout_constraintVertical_bias="0.484" />
 
     <TextView
         android:id="@+id/textViewTema"
         android:layout_width="375dp"
         android:layout_height="39dp"
         android:gravity="center"
-        android:text="¿Qué te gustaría agregar?"
+        android:text="¿QUÉ TE GUSTARÍA AGREGAR?"
         android:textColor="#0F3341"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="0.196" />
 
     <Button
         android:id="@+id/button7"

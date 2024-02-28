@@ -13,59 +13,59 @@
         android:theme="@style/Theme.Alumnos"
         tools:targetApi="31">
         <activity
-            android:name=".AdminInicio"
+            android:name="com.example.alumnos.AdminInicio"
             android:exported="false" />
         <activity
-            android:name=".AdminUsuarios"
-            android:exported="false" />
-
-        <activity
-            android:name=".AdminPropuestas"
-            android:exported="false" />
-        <activity
-            android:name=".Secundaria"
+            android:name="com.example.alumnos.AdminUsuarios"
             android:exported="false" />
 
         <activity
-            android:name=".EscolarActivity"
+            android:name="com.example.alumnos.AdminPropuestas"
+            android:exported="false" />
+        <activity
+            android:name="com.example.alumnos.Secundaria"
             android:exported="false" />
 
         <activity
-            android:name=".CrearPropuesta"
+            android:name="com.example.alumnos.EscolarActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.alumnos.CrearPropuesta"
             android:exported="false" />
         <activity
-            android:name=".MaterialDeAyuda"
+            android:name="com.example.alumnos.MaterialDeAyuda"
             android:exported="false" />
 
 
         <activity
-            android:name=".AgregarActivity"
+            android:name="com.example.alumnos.AgregarActivity"
             android:exported="false" />
 
         <activity
-            android:name=".SemestreActivity"
+            android:name="com.example.alumnos.SemestreActivity"
             android:exported="false" />
         <activity
-            android:name=".RecuperarActivity"
+            android:name="com.example.alumnos.RecuperarActivity"
             android:exported="false" />
 
         <activity
-            android:name=".Materias"
+            android:name="com.example.alumnos.Materias"
             android:exported="false" />
         <activity
-            android:name=".PaginaunoActivity"
+            android:name="com.example.alumnos.PaginaunoActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroActivity"
+            android:name="com.example.alumnos.RegistroActivity"
             android:exported="false" />
         <activity
-            android:name=".InicioActivity"
+            android:name="com.example.alumnos.InicioActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminCrearPropuesta"
+            android:name="com.example.alumnos.AdminCrearPropuesta"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.alumnos.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

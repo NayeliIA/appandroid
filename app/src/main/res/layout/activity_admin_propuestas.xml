@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#A38080"
-    tools:context="AdminPropuestas">
+    tools:context="com.example.alumnos.AdminPropuestas">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -78,8 +78,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="59dp"
-        android:layout_height="54dp"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.953"

@@ -36,7 +36,7 @@ public class AdminPropuestas extends AppCompatActivity {
     ImageView atras5;
     //private LinearLayout container;
 
-    private ArrayList<MaterialDeAyuda> propuestas = new ArrayList<MaterialDeAyuda>();
+    private ArrayList<com.example.alumnos.modelos.MaterialDeAyuda> propuestas = new ArrayList<com.example.alumnos.modelos.MaterialDeAyuda>();
 
     private RadioGroup radioGroup ;
 

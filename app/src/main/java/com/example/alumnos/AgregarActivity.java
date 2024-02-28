@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.Properties;
 
 
 public class AgregarActivity extends AppCompatActivity {
@@ -19,7 +18,7 @@ public class AgregarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar);
 
-        editTextTema = findViewById(R.id.editTextTema);
+        editTextTema = findViewById(R.id.nombre);
         editTextLink = findViewById(R.id.editTextLink);
 
         final int REQUEST_CODE_AGREGAR = 100;

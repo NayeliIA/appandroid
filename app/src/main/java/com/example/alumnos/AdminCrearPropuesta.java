@@ -47,7 +47,7 @@ public class AdminCrearPropuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_crear_propuesta);
 
-        editTextTema = findViewById(R.id.editTextTema);
+        editTextTema = findViewById(R.id.nombre);
         editTextLink = findViewById(R.id.editTextLink);
 
         atras5 = findViewById(R.id.atras5);
