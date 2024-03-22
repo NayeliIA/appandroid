@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/backimage" />
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/nombreMateria"
         android:layout_width="378dp"
         android:layout_height="49dp"
         android:background="#131313"

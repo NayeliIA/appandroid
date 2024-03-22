@@ -2,63 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/materiasAct"
 
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.alumnos.Materias">
 
-    <Button
-        android:id="@+id/matematicas"
-        android:layout_width="252dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#0F3341"
-        android:text="Matemáticas"
-        android:textColor="#F8F7F7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-    <Button
-        android:id="@+id/ingles"
-        android:layout_width="258dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#0F3341"
-        android:text="Inglés"
-        android:textColor="#F8F7F7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
-
-    <Button
-        android:id="@+id/geografia"
-        android:layout_width="255dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#0F3341"
-        android:text="Geografía"
-        android:textColor="#F8F7F7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <Button
-        android:id="@+id/historia"
-        android:layout_width="251dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#0F3341"
-        android:text="Historia"
-        android:textColor="#F8F7F7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
 
     <TextView
         android:id="@+id/textView4"
@@ -74,100 +23,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
-
-
-    <ImageView
-        android:id="@+id/filosofia1"
-        android:layout_width="40dp"
-        android:layout_height="28dp"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
-        app:srcCompat="@drawable/filosofia" />
-
-    <ImageView
-        android:id="@+id/geografia1"
-        android:layout_width="43dp"
-        android:layout_height="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/geografia" />
-
-    <ImageView
-        android:id="@+id/matematicas1"
-        android:layout_width="38dp"
-        android:layout_height="28dp"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712"
-        app:srcCompat="@drawable/matematicas" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <ImageView
         android:id="@+id/atras1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tint="#0F3341"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        app:srcCompat="@drawable/backimage" />
+        app:srcCompat="@drawable/backimage"
+        app:tint="#0F3341" />
 
-    <ImageView
-        android:id="@+id/info"
-        android:layout_width="38dp"
-        android:layout_height="28dp"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597"
-        app:srcCompat="@drawable/ingles" />
 
-    <ImageView
-        android:id="@+id/historia1"
-        android:layout_width="37dp"
-        android:layout_height="28dp"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386"
-        app:srcCompat="@drawable/historia" />
-
-    <Button
-        android:id="@+id/filosofia"
-        android:layout_width="251dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#0F3341"
-        android:text="Filosofía"
-        android:textColor="#F8F7F7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -180,5 +53,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/fondo1" />
+
+    <ScrollView
+        android:id="@+id/materiasScroll"
+        android:layout_width="375dp"
+        android:layout_height="429dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629"
+        >
+
+        <LinearLayout
+            android:id="@+id/layoutMaterias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"/>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

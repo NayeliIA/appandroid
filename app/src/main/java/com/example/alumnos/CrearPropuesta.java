@@ -31,7 +31,7 @@ public class CrearPropuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_propuesta);
 
-        editTextTema = findViewById(R.id.nombre);
+        editTextTema = findViewById(R.id.nombreMateria);
         editTextLink = findViewById(R.id.editTextLink);
 
         atras5 = findViewById(R.id.atras5);

@@ -41,7 +41,7 @@ public class RegistroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         atras = findViewById(R.id.atras8);
-        nombre = findViewById(R.id.nombre);
+        nombre = findViewById(R.id.nombreMateria);
         correoR = findViewById(R.id.correoR);
         contraseñaR = findViewById(R.id.contraseñaR);
         confirmarcontraseña = findViewById(R.id.confirmarcontraseña);

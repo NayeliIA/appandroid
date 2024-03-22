@@ -47,7 +47,7 @@ public class AdminCrearPropuesta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_crear_propuesta);
 
-        editTextTema = findViewById(R.id.nombre);
+        editTextTema = findViewById(R.id.nombreMateria);
         editTextLink = findViewById(R.id.editTextLink);
 
         atras5 = findViewById(R.id.atras5);
@@ -73,7 +73,7 @@ public class AdminCrearPropuesta extends AppCompatActivity {
 
 
         ArrayAdapter<String> adapterNivelEstudio = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opcionesNivelEstudio);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterNivelEstudio.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         nivelEducacionSpinner.setAdapter(adapterNivelEstudio);
 

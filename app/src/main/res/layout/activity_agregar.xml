@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/fondo1" />
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/nombreMateria"
         android:layout_width="356dp"
         android:layout_height="51dp"
         android:background="#E3E3E3"

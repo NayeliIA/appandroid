@@ -33,7 +33,7 @@
         app:tint="#0F3341"/>
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/nombreMateria"
         android:layout_width="343dp"
         android:layout_height="48dp"
         android:background="#131313"

@@ -84,10 +84,6 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
 
 
 
-
-
-
-
         atras4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -354,6 +350,9 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(guion);
         builder.setSpan(new ImageSpan(imgDrawable, ImageSpan.ALIGN_BASELINE), builder.length() - 1, builder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+
 
         // Crear un TextView y establecer el SpannableStringBuilder como su texto
         TextView textView = new TextView(this);
