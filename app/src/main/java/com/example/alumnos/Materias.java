@@ -2,6 +2,8 @@ package com.example.alumnos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -24,7 +26,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 
 
-public class Materias extends AppCompatActivity implements View.OnClickListener{
+public class Materias extends AppCompatActivity {
 
 
     ImageView atras1;
@@ -38,6 +40,10 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
 
     private ArrayList<Materia> materias = new ArrayList<Materia>();
 
+    private String grado;
+
+    private String nivelEducacion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,45 +52,24 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
 
         db = FirebaseFirestore.getInstance();
 
-//        filosofia = findViewById(R.id.filosofia);
 
-        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
-        final String grado = getIntent().getStringExtra("grado");
+         nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+         grado = getIntent().getStringExtra("grado");
+
+//        nivelEducacion = "SECUNDARIA";
+//        grado = "1";
 
         materiasScroll = findViewById(R.id.materiasScroll);
 
         layoutMaterias = findViewById(R.id.layoutMaterias);
 
-        cargarMaterias("SECUNDARIA",1);
+        cargarMaterias(nivelEducacion, Integer.parseInt(grado) );
 
         final int imagenes[] = {R.drawable.filosofia, R.drawable.esp, R.drawable.biologia, R.drawable.fisica, R.drawable.geografia,R.drawable.historia, R.drawable.matematicas,
                 R.drawable.logica, R.drawable.metodologia, R.drawable.quimica, R.drawable.ingles};
 
 
-//        layoutMaterias.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // Obtiene el índice del elemento seleccionado dentro del LinearLayout
-//
-//               int nmms = view.getId();
-//               //String quePedo = view.getTag().toString();
-//
-//
-//                int perro = materiasScroll.indexOfChild(view);
-//
-//                int index = layoutMaterias.indexOfChild(view);
-//
-//                View nmm = layoutMaterias.getFocusedChild();
-//
-//                int intento = layoutMaterias.indexOfChild(nmm);
-//
-//                if (view instanceof TextView) {
-//                    String tag = (String) view.getTag();
-//                    // Tu código aquí
-//                }
-//
-//            }
-//        });
+
 
 
 
@@ -100,21 +85,7 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
 
 
 
-//        filosofia.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
-//                i.putExtra("materia", "FILOSOFIA");
-//                i.putExtra("nivelEducacion", nivelEducacion);
-//                i.putExtra("grado", grado);
-//                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
-//
-//
-//            }
-//
-//
-//        });
+
 
     }
 
@@ -134,16 +105,7 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
                         for (QueryDocumentSnapshot document : task.getResult()) {
 
                             materias.add( new Materia(document.getId(), document.getData() ) );
-
-//                            TextView titulo = new TextView(MaterialDeAyuda.this);
-//                            titulo.setText(materialDeAyuda.get(index).getTema());
-
-                            //titulo.setId(index);
-                            // Agrega el RadioButton al grupo
-                            //materialesScroll.addView(titulo, index);
                             addMateria(materias.get(index).getNombre(), materias.get(index).getIdImagen(), index );
-
-
 
                             index++;
                         }
@@ -181,6 +143,24 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
         textView.setTag(index);
         //textView.setId(index);
 
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Recupera el índice del elemento desde la etiqueta de la vista
+                int index = (int) v.getTag();
+
+                Intent i = new Intent(Materias.this, MaterialDeAyuda.class);
+                i.putExtra("materia", materias.get(index).getNombre() );
+                i.putExtra("nivelEducacion", nivelEducacion);
+                i.putExtra("grado", grado);
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(Materias.this).toBundle());
+
+
+                // Ahora puedes utilizar el índice del elemento seleccionado
+                // ...
+            }
+        });
+
 
 
         //textView.setOnClickListener(this);
@@ -195,10 +175,4 @@ public class Materias extends AppCompatActivity implements View.OnClickListener{
     }
 
 
-    @Override
-    public void onClick(View view) {
-
-       int indice = layoutMaterias.indexOfChild(view);
-
-    }
 }
