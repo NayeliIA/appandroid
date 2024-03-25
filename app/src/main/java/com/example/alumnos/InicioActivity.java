@@ -122,20 +122,25 @@ public class InicioActivity extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                                 @Override
                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+
                                     if (documentSnapshot.exists()) {
                                         // El documento existe, puedes acceder a sus datos
                                         Map<String, Object> datos = documentSnapshot.getData();
                                         String rolUsuario = datos.get("role").toString();
 
                                         if(rolUsuario.equals("1")){
-
                                             Intent i = new Intent(InicioActivity.this, AdminInicio.class);
+                                           i.putExtra("rolUsuario", 1);
                                             startActivity(i);
+
 
                                         }else{
 
                                             Intent i = new Intent(InicioActivity.this, PaginaunoActivity.class);
+                                            i.putExtra("rolUsuario", 0);
                                             startActivity(i);
+
 
                                         }
 
@@ -145,6 +150,7 @@ public class InicioActivity extends AppCompatActivity {
                                         // El documento no existe
 
                                     }
+
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {

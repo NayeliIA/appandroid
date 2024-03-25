@@ -14,6 +14,8 @@ public class AdminInicio extends AppCompatActivity {
     Button buttonContenido;
     Button buttonfinish;
     Button buttonsubir;
+    Button buttonmaterias;
+    Button buttoneliminar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,23 @@ public class AdminInicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AdminInicio.this, AdminCrearPropuesta.class);
+                startActivity(i);
+            }
+        });
+        buttonmaterias = findViewById(R.id.buttonmaterias);
+        buttonmaterias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AdminInicio.this, AdminMaterias.class);
+                startActivity(i);
+            }
+        });
+
+        buttoneliminar = findViewById(R.id.buttoneliminar);
+        buttoneliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AdminInicio.this, EscolarActivity.class);
                 startActivity(i);
             }
         });

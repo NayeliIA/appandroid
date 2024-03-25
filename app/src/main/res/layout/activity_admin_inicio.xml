@@ -7,6 +7,33 @@
     tools:context="com.example.alumnos.AdminInicio">
 
     <Button
+        android:id="@+id/buttoneliminar"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#0F3341"
+        android:text="Eliminar materias"
+        android:textColor="#F8F7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+    <Button
+        android:id="@+id/buttonmaterias"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#0F3341"
+        android:text="Agregar materias"
+        android:textColor="#F8F7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <Button
         android:id="@+id/buttonsubir"
         android:layout_width="205dp"
         android:layout_height="62dp"
@@ -18,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.582" />
 
     <Button
         android:id="@+id/buttonfinish"
@@ -48,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintVertical_bias="0.445" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -88,6 +115,6 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintVertical_bias="0.309" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

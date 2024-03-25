@@ -61,7 +61,7 @@ public class SemestreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String grado = gradoSpinner();
-    if(grado.equals("5")) {
+    if(grado.equals("1")|| grado.equals("2")|| grado.equals("3")|| grado.equals("4")||grado.equals("5") || grado.equals("6") || grado.equals("7")) {
     Intent i = new Intent(SemestreActivity.this, Materias.class);
 
     final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
@@ -78,29 +78,26 @@ public class SemestreActivity extends AppCompatActivity {
     }
 
 
-    private String gradoSpinner(){
+    private String gradoSpinner() {
 
         final String opcion = spinnerLanguages.getSelectedItem().toString();
 
-        //if(opcion.startsWith("1")){
-          //  return "1";
-        //}else if(opcion.startsWith("2")){
-           // return "2";
-       // }
-       // else if(opcion.startsWith("3")){
-          //  return "3";
-       // }
-       // else if(opcion.startsWith("4")){
-           // return "4";
-       // }
-        if(opcion.startsWith("5")){
+        if (opcion.startsWith("1")) {
+            return "1";
+        } else if (opcion.startsWith("2")) {
+            return "2";
+        } else if (opcion.startsWith("3")) {
+            return "3";
+        } else if (opcion.startsWith("4")) {
+            return "4";
+        } else if (opcion.startsWith("5")) {
             return "5";
+        } else if (opcion.startsWith("6")) {
+            return "6";
+        } else if (opcion.startsWith("7")) {
+            return "7";
         }
-       // else if(opcion.startsWith("6")){
-            //return "6";
-        else{
             return "";
-        }
 
-    };
+    }
 }

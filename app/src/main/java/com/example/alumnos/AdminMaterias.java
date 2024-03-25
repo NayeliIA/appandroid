@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.alumnos.modelos.Materia;
@@ -116,7 +117,7 @@ public class AdminMaterias extends AppCompatActivity {
                             public void onSuccess(DocumentReference documentReference) {
 
                                 final String id = documentReference.getId();
-
+                                Toast.makeText(AdminMaterias.this, "Se agregó la materia correctamente", Toast.LENGTH_SHORT).show();
                                 finish();
 
 

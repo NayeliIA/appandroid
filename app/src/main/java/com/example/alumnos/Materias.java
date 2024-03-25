@@ -164,8 +164,9 @@ public class Materias extends AppCompatActivity {
 
 
         //textView.setOnClickListener(this);
-        textView.setTextColor(Color.rgb(15,51,65));
-        textView.setTextSize(30);
+        textView.setTextColor(Color.rgb(255,255,255));
+        textView.setBackgroundColor(Color.rgb(15,51,65)); // Fon
+        textView.setTextSize(15);
         textView.setGravity(Gravity.CENTER_VERTICAL);
 
         layoutMaterias.addView(textView);

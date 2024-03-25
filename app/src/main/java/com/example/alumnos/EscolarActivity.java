@@ -68,7 +68,14 @@ public class EscolarActivity extends AppCompatActivity {
                             startActivity(i);
                         }
                         else{
-                            Toast.makeText(EscolarActivity.this, "Por el momento solo se esta trabajando con preparatoria", Toast.LENGTH_SHORT).show();
+                           if( nivelSeleccionado.equals("Secundaria")){
+                               Intent i = new Intent(EscolarActivity.this, Secundaria.class);
+
+                               i.putExtra("nivelEducacion","SECUNDARIA");
+                               startActivity(i);
+
+                           }
+                            //Toast.makeText(EscolarActivity.this, "Por el momento solo se esta trabajando con preparatoria", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
