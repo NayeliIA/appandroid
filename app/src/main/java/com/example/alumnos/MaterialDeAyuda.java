@@ -4,6 +4,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -21,12 +22,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Set;
 
 public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickListener {
@@ -42,11 +50,6 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
     private ArrayList<com.example.alumnos.modelos.MaterialDeAyuda> materialDeAyuda = new ArrayList<com.example.alumnos.modelos.MaterialDeAyuda>();
 
 
-    private Set<String> linkSet;
-
-
-    private static final int REQUEST_CODE = 1;
-
     private FirebaseFirestore db;
 
     private LinearLayout materialesScroll;
@@ -54,6 +57,12 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
 
     private String materia;
 
+    private FirebaseAuth mAuth;
+
+    private Switch switchEliminar;
+
+    private String nivelEducacion;
+    private String grado;
 
 
     @Override
@@ -62,6 +71,8 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_material_de_ayuda);
 
         db = FirebaseFirestore.getInstance();
+
+        mAuth = FirebaseAuth.getInstance();
 
         materia = getIntent().getStringExtra("materia");
 
@@ -73,11 +84,19 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
 
         scrollview = findViewById(R.id.scroll);
 
-        final String nivelEducacion = getIntent().getStringExtra("nivelEducacion");
-        final String grado = getIntent().getStringExtra("grado");
+        switchEliminar = findViewById(R.id.switchEliminar);
+
+        nivelEducacion = getIntent().getStringExtra("nivelEducacion");
+        grado = getIntent().getStringExtra("grado");
+
+        //cargarMaterial("MATEMATICAS", "PREPARATORIA", "5");
 
 
         cargarMaterial(materia, nivelEducacion, grado);
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        botonEliminar( currentUser.getUid() );
 
 
 
@@ -104,12 +123,75 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    public void botonEliminar( String uidUsuario ){
+        db.collection("Users").document( uidUsuario ).get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+
+                        if (documentSnapshot.exists()) {
+                            // El documento existe, puedes acceder a sus datos
+                            Map<String, Object> datos = documentSnapshot.getData();
+                            String rolUsuario = datos.get("role").toString();
+
+                            if(rolUsuario.equals("1")){
+
+
+                                switchEliminar.setVisibility(View.VISIBLE);
+
+
+                            }
+
+
+
+                        } else {
+                            // El documento no existe
+
+                        }
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Manejar el fallo en la operación
+
+                    }
+                });
+    }
+
 
     @Override
     public void onClick(View view) {
 
 
         int seleccionado = materialesScroll.indexOfChild(view);
+
+        if(switchEliminar.getVisibility() == View.VISIBLE && switchEliminar.isChecked()){
+
+            System.out.println("Es admin y esta activo");
+
+            db.collection("material").document( materialDeAyuda.get(seleccionado).getId() )
+                    .delete()
+                    .addOnSuccessListener(aVoid -> {
+
+                        System.out.println("Se elimino correctamente");
+
+                        cargarMaterial(materia, nivelEducacion, grado);
+                        //cargarMaterial("MATEMATICAS", "PREPARATORIA", "5");
+
+                        switchEliminar.setChecked(false);
+
+
+                    })
+                    .addOnFailureListener(e -> {
+
+                    });
+
+            return;
+
+        }
 
         openLink(materialDeAyuda.get(seleccionado).getLink());
 
@@ -223,6 +305,10 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
 
     private void cargarMaterial(String materia, String nivelEducacion, String grado){
 
+        materialDeAyuda.clear();
+
+        materialesScroll.removeAllViews();
+
         db.collection("material")
                 //Con esto se consulta las propuestas con la condicion de que la propiedad materia tenga el nombre de la materia seleccionada
                 .whereEqualTo("materia",materia)
@@ -247,18 +333,12 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
                             //materialesScroll.addView(titulo, index);
                             addLinkView(materialDeAyuda.get(index).getLink(),materialDeAyuda.get(index).getTema(),Color.rgb(15,51,65), 16 );
 
-                            titulo.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    // Acciones a realizar al hacer clic en el TextView
-                                    int index = scrollview.indexOfChild(view);
 
-
-                                }
-                            });
 
                             index++;
                         }
+
+
                     } else {
                         // Manejar errores
                         //Log.d(TAG, "Error getting documents: ", task.getException());

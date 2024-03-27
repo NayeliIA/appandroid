@@ -55,7 +55,6 @@
         android:layout_height="61dp"
         android:textColor="#F8F7F7"
         android:backgroundTint="#0F3341"
-        android:onClick="onClickButton"
         android:text="Agregar información"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,5 +92,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/fondo1" />
+
+    <Switch
+        android:id="@+id/switchEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@android:drawable/ic_menu_delete"
+        android:text="Eliminar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
