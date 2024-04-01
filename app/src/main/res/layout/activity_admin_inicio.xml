@@ -11,7 +11,7 @@
         android:layout_width="205dp"
         android:layout_height="62dp"
         android:backgroundTint="#0F3341"
-        android:text="Eliminar materias"
+        android:text="Eliminar contenido"
         android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

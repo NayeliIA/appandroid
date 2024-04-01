@@ -69,12 +69,6 @@ public class Materias extends AppCompatActivity {
                 R.drawable.logica, R.drawable.metodologia, R.drawable.quimica, R.drawable.ingles};
 
 
-
-
-
-
-
-
         atras1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,14 +76,7 @@ public class Materias extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
-
-
 
     private void cargarMaterias(String nivelEducacion, int grado){
         db.collection("materias")
@@ -124,13 +111,29 @@ public class Materias extends AppCompatActivity {
         // Crear la imagen
         Drawable imgDrawable = getResources().getDrawable(idImagen);
 
-        imgDrawable.setBounds(0, 0, 100, 100);
+        imgDrawable.setBounds(5, 0, 100, 100);
 
         // Crear un SpannableStringBuilder y añadir el texto y la imagen
         SpannableStringBuilder builder = new SpannableStringBuilder();
 
-        builder.append(nombre + "      ");
-        builder.setSpan(new ImageSpan(imgDrawable, ImageSpan.ALIGN_BOTTOM), builder.length() - 1, builder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        builder.append(nombre + "          ");
+
+        if(nombre.length() == 6) { //6 caracteres
+            builder.append("           ");
+        }
+        if(nombre.length() == 9){//9 caracteres
+            builder.append("     ");
+        }
+        if(nombre.length() == 8){ //8 caracteres
+            builder.append("            ");
+        }
+        /*if(nombre.equals("GEOGRAFIA")) { //9 caracteres
+            builder.append("     ");
+        }*/
+        if(nombre.length() == 11){ //11 caracteres
+            builder.append(" ");
+        }
+        builder.setSpan(new ImageSpan(imgDrawable, ImageSpan.ALIGN_BOTTOM), builder.length() - 1, builder.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE );
 
 
         AlignmentSpan alignmentSpan = new AlignmentSpan.Standard(Layout.Alignment.ALIGN_CENTER);
@@ -141,7 +144,7 @@ public class Materias extends AppCompatActivity {
         TextView textView = new TextView(this);
         textView.setText(builder);
         textView.setTag(index);
-        //textView.setId(index);
+        //textView.setGravity(Gravity.CENTER_VERTICAL);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,7 +168,7 @@ public class Materias extends AppCompatActivity {
 
         //textView.setOnClickListener(this);
         textView.setTextColor(Color.rgb(255,255,255));
-        textView.setBackgroundColor(Color.rgb(15,51,65)); // Fon
+        textView.setBackgroundColor(Color.rgb(15,51,65)); // Fondo
         textView.setTextSize(15);
         textView.setGravity(Gravity.CENTER_VERTICAL);
 

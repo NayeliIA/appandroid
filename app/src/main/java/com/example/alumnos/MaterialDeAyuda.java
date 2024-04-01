@@ -176,7 +176,7 @@ public class MaterialDeAyuda extends AppCompatActivity implements View.OnClickLi
                     .delete()
                     .addOnSuccessListener(aVoid -> {
 
-                        System.out.println("Se elimino correctamente");
+                        System.out.println("Se eliminó correctamente");
 
                         cargarMaterial(materia, nivelEducacion, grado);
                         //cargarMaterial("MATEMATICAS", "PREPARATORIA", "5");
